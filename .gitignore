@@ -1,0 +1,10 @@
+gcloud/
+raycast/
+firebase/
+flutter/
+configstore/
+**/*.log
+**/*.lock
+iterm2/
+.DS_Store
+neofetch/
