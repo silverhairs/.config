@@ -1,0 +1,7 @@
+alias flutter="fvm flutter"
+alias python="python3"
+alias pip="pip3"
+eval $(thefuck --alias)
+alias wtf="fuck"
+alias img="kitty +kitten icat"
+alias cd="z"
