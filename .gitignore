@@ -9,3 +9,5 @@ iterm2/
 .DS_Store
 neofetch/
 nvim/
+tmux/
+kitty/termpdf.py/
