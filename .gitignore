@@ -11,3 +11,6 @@ neofetch/
 tmux/
 kitty/termpdf.py/
 **/*_compiled.lua
+**/__pycache__/
+node_modules/
+.dart-tools/
