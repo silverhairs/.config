@@ -2,6 +2,7 @@ local keymap = vim.keymap
 
 vim.g.mapleader = " "
 keymap.set("n", "<leader>E", vim.cmd.Ex)
+keymap.set("n", "<C-e>", vim.cmd.NvimTreeToggle)
 keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 keymap.set("n", "<leader>gs", vim.cmd.Git)
 
