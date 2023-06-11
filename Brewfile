@@ -1,0 +1,11 @@
+brew 'zoxide'
+brew 'koekeishiya/formulae/yabai'
+brew 'koekeishiya/formulae/skhd'
+brew 'tmux'
+brew 'neovim'
+brew 'gh'
+brew 'thefuck'
+brew 'fig'
+cask 'raycast'
+cask 'fig'
+
