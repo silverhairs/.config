@@ -1,15 +1,23 @@
 # .config
 
 Still a couple of configs missing, will add them soon, as well as a script to set this up quickly
+
+## Getting Started
+```sh
+$ make install
+```
+This command will install the packages below in your system:
+- [x] [zoxide](https://github.com/ajeetdsouza/zoxide)
+- [x] [yabai](https://github.com/koekeishiya/yabai)
+- [x] [skhd](https://github.com/koekeishiya/skhd)
+- [ ] [kitty](https://github.com/kovidgoyal/kitty)
+- [x] [tmux](https://github.com/tmux/tmux)
+- [x] [neovim](https://neovim.io/)
+- [x] [gh](https://cli.github.com/)
+- [x] [thefuck](https://github.com/nvbn/thefuck)
+- [x] [fig](https://fig.io/)
+- [x] [raycast](https://www.raycast.com/)
+- [ ] [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
+
 ## Requirements:
-- [zoxide](https://github.com/ajeetdsouza/zoxide)
-- [yabai](https://github.com/koekeishiya/yabai)
-- [skhd](https://github.com/koekeishiya/skhd)
-- [kitty](https://github.com/kovidgoyal/kitty)
-- [tmux](https://github.com/tmux/tmux)
-- [neovim](https://neovim.io/)
-- [gh](https://cli.github.com/)
-- [thefuck](https://github.com/nvbn/thefuck)
-- [fig](https://fig.io/)
-- [raycast](https://www.raycast.com/)
-- [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
+- [Homebrew](https://brew.sh/)
