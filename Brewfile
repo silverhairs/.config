@@ -5,7 +5,5 @@ brew 'tmux'
 brew 'neovim'
 brew 'gh'
 brew 'thefuck'
-brew 'fig'
-cask 'raycast'
 cask 'fig'
-
+cask 'raycast'
