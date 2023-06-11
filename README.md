@@ -19,5 +19,8 @@ This command will install the packages below in your system:
 - [x] [raycast](https://www.raycast.com/)
 - [x] [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 
+Note that by default, Homebrew will be used as a package manager, unless a package is not hosted on homebrew, the `install` command will install it from homebrew.
+
 ## Requirements:
 - [Homebrew](https://brew.sh/)
+- [curl](https://curl.se/)
