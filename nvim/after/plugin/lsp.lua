@@ -1,5 +1,11 @@
 local lsp = require('lsp-zero')
-require'lspconfig'.dartls.setup{}
+local nvim_lsp=require('lspconfig')
+nvim_lsp.dartls.setup{}
+nvim_lsp.gopls.setup{
+    on_attach = function (client)
+       vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()") 
+    end
+}
 lsp.preset('recommended')
 lsp.ensure_installed({
 	'tsserver',

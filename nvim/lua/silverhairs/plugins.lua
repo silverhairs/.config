@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
 	use('nvim-treesitter/playground')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
+    use {'mhartington/formatter.nvim'}
     use {
         'lewis6991/gitsigns.nvim',
         -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)

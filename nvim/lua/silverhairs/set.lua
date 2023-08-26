@@ -2,7 +2,7 @@ vim.opt.number = true
 vim.opt.termguicolors = true
 vim.opt.updatetime = 80
 vim.opt.colorcolumn = "80"
-
+vim.opt.guifont = "Dank Mono"
 -- Makes 1 Tab = 4 Spaces
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
