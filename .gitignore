@@ -14,3 +14,4 @@ kitty/termpdf.py/
 **/__pycache__/
 node_modules/
 .dart-tools/
+yarn/
