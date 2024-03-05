@@ -15,3 +15,4 @@ kitty/termpdf.py/
 node_modules/
 .dart-tools/
 yarn/
+op/

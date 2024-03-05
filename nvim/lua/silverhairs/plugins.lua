@@ -1,9 +1,8 @@
-
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.1',
+		'nvim-telescope/telescope.nvim', tag = '0.1.5',
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
@@ -13,6 +12,20 @@ return require('packer').startup(function(use)
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
     use {'mhartington/formatter.nvim'}
+    use{
+        "kyazdani42/nvim-tree.lua",
+        requires = "kyazdani42/nvim-web-devicons",
+        wants = "nvim-web-devicons",
+        config = function()
+            require("nvim-web-devicons").setup()
+            require("nvim-tree").setup {
+                hijack_cursor = true,
+                view = {
+                    width = 40
+                }
+            }
+        end
+    }
     use {
         'lewis6991/gitsigns.nvim',
         -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
