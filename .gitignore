@@ -16,3 +16,5 @@ node_modules/
 .dart-tools/
 yarn/
 op/
+zed/embeddings
+zed/.*
