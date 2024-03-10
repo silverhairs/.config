@@ -19,6 +19,13 @@ This command will install the packages below in your system:
 - [x] [raycast](https://www.raycast.com/)
 - [x] [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 
+After the command is done, you can symlink the `/zsh/.zshrc` with the path where
+your zshrc file lives (usually at `~/.zsrhc`)
+
+```sh
+ln -s zsh/.zshrc ~/.zshrc
+```
+
 Note that by default, Homebrew will be used as a package manager, unless a package is not hosted on homebrew, the `install` command will install it from homebrew.
 
 ## Requirements:
