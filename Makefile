@@ -15,4 +15,5 @@ vscode-extensions:
 vscode:
 	ln -s .vscode-oss ~/.vscode-oss
 	brew install --cask vscodium
-	make vscode-extensions
+	cp -R $(PWD)/.vscode-oss/User ~/Library/Application\ Support/VSCodium/User/
+	cat .vscode-oss/extensions.txt | xargs -L 1 codium --install-extension
