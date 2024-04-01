@@ -1,4 +1,4 @@
-.PHONY: install symlinks vscode-extensions
+.PHONY: install symlinks vscode-extensions vscode
 
 install:
 	-brew bundle
