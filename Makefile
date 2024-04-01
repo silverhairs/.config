@@ -12,3 +12,7 @@ symlinks:
 vscode-extensions:
 	cat .vscode-oss/extensions.txt | xargs -L 1 code --install-extension
 
+vscode:
+	ln -s .vscode-oss ~/.vscode-oss
+	brew install --cask vscodium
+	make vscode-extensions
