@@ -1,0 +1,219 @@
+/**
+Requires the following fonts to be downloaded and installed in the system:
+- Geist Mono
+- SpaceMono Nerd Font
+- Space Mono Powerline
+- Dank Mono
+- MonoLisa
+- SF Mono
+*/
+{
+  "background.fullscreen": {
+    "images": [
+      "https://github.com/silverhairs/.config/blob/main/kitty/assets/bochi.jpg?raw=true"
+    ],
+    "opacity": 0.85,
+    "size": "cover",
+    "position": "center",
+    "interval": 0
+  },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.fixAll": "explicit"
+    }
+  },
+
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.screenReaderAnnounceInlineSuggestion": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "cmake.configureOnOpen": false,
+  "dart.flutterSdkPath": ".fvm/flutter_sdk",
+  "dart.openDevTools": "flutter",
+  "debug.allowBreakpointsEverywhere": true,
+  "debug.console.fontFamily": "Geist Mono, SF Mono",
+  "debug.console.fontSize": 17,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.accessibilitySupport": "off",
+  "editor.cursorBlinking": "expand",
+  "editor.fontFamily": "DM Mono, MonoLisa, Geist Mono, 'SF Mono','Dank Mono','SpaceMono Nerd Font', MonoLisa,  'Space Mono for Powerline', Nova",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 18,
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.suggestSelection": "first",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "Comment",
+        "scope": [
+          "comment",
+          "comment.block",
+          "comment.block.documentation",
+          "comment.line",
+          "comment.line.double-slash",
+          "punctuation.definition.comment",
+          "keyword",
+          "storage.modifier"
+        ],
+        "settings": {
+          "fontStyle": "bold"
+        }
+      }
+    ]
+  },
+  "editor.unicodeHighlight.allowedCharacters": {
+    "️": true
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/*.g.dart": true,
+    "**/*.freezed.dart": true
+  },
+  "files.watcherExclude": {
+    "**/.fvm": true
+  },
+  "git.autofetch": true,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "yaml": false,
+    "dart": false,
+    "javascript": false,
+    "rust": true,
+    "cpp": false,
+    "go": false,
+    "python": false,
+    "zig": false,
+    "ocaml": false,
+    "toml": false
+  },
+  "githubPullRequests.pullBranch": "never",
+  "go.toolsManagement.autoUpdate": true,
+  "json.format.enable": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "prettier.enable": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "redhat.telemetry.enabled": true,
+  "search.exclude": {
+    "**/.fvm": true
+  },
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1",
+    "CW_NEW_SESSION": "1"
+  },
+  "terminal.integrated.fontFamily": "Geist Mono, SF Mono",
+  "terminal.integrated.fontSize": 17,
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.editorAssociations": {
+    "*.class": "default"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "kotlin.languageServer.enabled": false,
+  "kotlin.debugAdapter.enabled": false,
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "security.workspace.trust.untrustedFiles": "open",
+  "kotlin.java.home": "/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-1.8",
+      "path": "/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home"
+    }
+  ],
+  // java.jdt.ls.java.home
+  "maven.terminal.useJavaHome": true,
+  "react-native-tools.showUserTips": false,
+  "update.mode": "start",
+  "git.openRepositoryInParentFolders": "never",
+  "java.import.gradle.user.home": "/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 3000,
+  "vs-kubernetes": {
+    "vs-kubernetes.minikube-show-information-expiration": "2024-04-06T00:03:57.608Z",
+    "vscode-kubernetes.helm-path.mac": "/Users/silverhairs/.vs-kubernetes/tools/helm/darwin-arm64/helm"
+  },
+  "lldb.library": "/Applications/Xcode-15.0.0.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "liveshare.allowGuestDebugControl": true,
+  "liveshare.allowGuestTaskControl": true,
+  "cody.autocomplete.enabled": true,
+  "copyrightInserter.holder": "Boris Kayi<hello@silverhairs.engineer>",
+  "copyrightInserter.license": "apache",
+  "errorLens.enabledDiagnosticLevels": ["warning", "info"],
+  "lldb.launch.expressions": "native",
+  "errorLens.messageEnabled": false,
+  "dart.debugExternalPackageLibraries": true,
+  "dart.debugSdkLibraries": false,
+  "diffEditor.renderSideBySide": false,
+  "zig.initialSetupDone": true,
+  "catppuccin.italicKeywords": false,
+  "dart.checkForSdkUpdates": false,
+  "zig.path": "~/zig/zig",
+  "zig.zls.path": "/Users/silverhairs/Library/Application Support/VSCodium/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
+  "window.zoomLevel": -1,
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "cmake.showOptionsMovedNotification": false,
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "workbench.activityBar.location": "hidden"
+}

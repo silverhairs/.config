@@ -1,0 +1,8 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "ctrl+k ctrl+o",
+    "command": "workbench.action.duplicateWorkspaceInNewWindow"
+  },
+  { "key": "cmd+shift+g", "command": "workbench.view.scm" }
+]
