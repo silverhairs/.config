@@ -7,7 +7,7 @@ install:
 
 symlinks:
 	ln -s ./.vscode-oss ~/.vscode-oss
-	ln -s zsh/.zshrc ~/.zshrc
+	ln -s ./zsh/.zshrc ~/.zshrc
 
 vscode-extensions:
 	cat .vscode-oss/extensions.txt | xargs -L 1 codium --install-extension
