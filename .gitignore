@@ -20,5 +20,5 @@ zed/embeddings
 zed/.*
 .vscode-oss/extensions/
 .vscode-oss/User/History
-.vscode-oss/User/workspaceStorage
-.vscode-oss/User/globalStorage
+.vscode-oss/**/workspaceStorage
+.vscode-oss/**/globalStorage
