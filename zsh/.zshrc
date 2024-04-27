@@ -117,7 +117,7 @@ source $HOME/.zsh_SECRETS
 eval "$(zoxide init --cmd cd zsh)"
 eval $(thefuck --alias)
 eval "$(rbenv init -)"
-
+eval "$(fzf --zsh)"
 ## [Completion] 
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /Users/silverhairs/.dart-cli-completion/zsh-config.zsh ]] && . /Users/silverhairs/.dart-cli-completion/zsh-config.zsh || true
