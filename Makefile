@@ -1,4 +1,4 @@
-.PHONY: install symlinks vscode-extensions vscode
+.PHONY: install symlinks vscode-extensions vscode helix
 
 install:
 	-brew bundle
@@ -17,3 +17,12 @@ vscode:
 	brew install --cask vscodium
 	cp -R ./.vscode-oss/User ~/Library/Application\ Support/VSCodium/User
 	cat .vscode-oss/extensions.txt | xargs -L 1 codium --install-extension
+
+helix:
+	git clone https://github.com/helix-editor/helix helix
+	cd helix
+	rm -rf .git
+	@echo "Building Helix"
+	cargo install --path helix-term --locked
+	@hx --health
+	
