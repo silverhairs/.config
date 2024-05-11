@@ -20,7 +20,7 @@ vscode:
 
 helix:
 	git clone https://github.com/helix-editor/helix helix-code
-	cp -R -n /helix-code/* /helix/
+	cp -R -n helix-code/* helix/
 	cd helix
 	rm -rf .git
 	@echo "Building Helix"
@@ -28,3 +28,5 @@ helix:
 	@hx --health
 	@echo "Installing Catppuccin"
 	git clone git@github.com:catppuccin/helix.git catppuccin && cd catppuccin && rm -rf .git
+	@cd ../../
+	
