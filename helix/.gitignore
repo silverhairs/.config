@@ -1,0 +1,15 @@
+target
+.direnv
+helix-term/rustfmt.toml
+result
+runtime/
+Cargo.*
+catppiccin/
+book/
+docs/
+flake.*
+helix-*
+xtask
+rustfmt.toml
+logo_*
+contrib/
