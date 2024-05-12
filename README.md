@@ -19,6 +19,7 @@ This command will install the packages below in your system:
 - [x] [raycast](https://www.raycast.com/)
 - [x] [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 - [x] [helix](https://github.com/helix-editor/helix)
+
 After the command is done, you can symlink the `/zsh/.zshrc` with the path where
 your zshrc file lives (usually at `~/.zsrhc`)
 
