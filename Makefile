@@ -22,9 +22,14 @@ helix:
 	@git clone https://github.com/helix-editor/helix helix-code
 	@mkdir -p $(PWD)/helix
 	@cp -R $(PWD)/helix-code/* $(PWD)/helix/
+	@rm -rf $(PWD)/helix-code
 	@cd helix && rm -rf .git
 	@echo "Building Helix"
 	@cd helix && export HELIX_DISABLE_AUTO_GRAMMAR_BUILD=1 && cargo install --path helix-term --locked
 	@hx --health
-	@echo "Installing Catppuccin"
-	@cd helix && git clone git@github.com:catppuccin/helix.git catppuccin && cd catppuccin && rm -rf .git
+	@echo "🎨 Installing Catppuccin 🎨"
+	@cd helix && [ ! -d "catppuccin" ] && \
+		git clone git@github.com:catppuccin/helix.git catppuccin && \
+		cd catppuccin && rm -rf .git || \
+		echo "✅ Catppuccin already installed"
+	@echo "🚀 Helix installation completed successfully!! 🚀"
