@@ -5,17 +5,17 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export _ZO_DATA_DIR="/Users/silverhairs/.local/share"
+export _ZO_DATA_DIR="/Users/${USER}/.local/share"
 # Path to Flutter and dart
-export PATH="$PATH:/Users/silverhairs/fvm/default/bin"
+export PATH="$PATH:/Users/${USER}/fvm/default/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
-export PATH="$PATH:/Users/silverhairs/.gem/bin"
+export PATH="$PATH:/Users/${USER}/.gem/bin"
 export PATH="$PATH":"$HOME/zig"
 # Android
-export PATH="$PATH:/Users/silverhairs/Library/Android/sdk/platform-tools/"
+export PATH="$PATH:/Users/${USER}/Library/Android/sdk/platform-tools/"
 export GEM_HOME="$HOME/.gem"
 # Python
-export PATH="$PATH:/Users/silverhairs/Library/Python/3.9/bin"
+export PATH="$PATH:/Users/${USER}/Library/Python/3.9/bin"
 export HELIX_RUNTIME="~/.config/helix/runtime"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -121,11 +121,11 @@ eval "$(rbenv init -)"
 eval "$(fzf --zsh)"
 ## [Completion] 
 ## Completion scripts setup. Remove the following line to uninstall
-[[ -f /Users/silverhairs/.dart-cli-completion/zsh-config.zsh ]] && . /Users/silverhairs/.dart-cli-completion/zsh-config.zsh || true
+[[ -f /Users/${USER}/.dart-cli-completion/zsh-config.zsh ]] && . /Users/${USER}/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
 # opam configuration
-[[ ! -r /Users/silverhairs/.opam/opam-init/init.zsh ]] || source /Users/silverhairs/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+[[ ! -r /Users/${USER}/.opam/opam-init/init.zsh ]] || source /Users/${USER}/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 
 [[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
