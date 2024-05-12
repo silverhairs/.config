@@ -24,7 +24,7 @@ helix:
 	@cp -R $(PWD)/helix-code/* $(PWD)/helix/
 	@cd helix && rm -rf .git
 	@echo "Building Helix"
-	@cd helix && cargo install --path helix-term --locked
+	@cd helix && export HELIX_DISABLE_AUTO_GRAMMAR_BUILD=1 && cargo install --path helix-term --locked
 	@hx --health
 	@echo "Installing Catppuccin"
 	@cd helix && git clone git@github.com:catppuccin/helix.git catppuccin && cd catppuccin && rm -rf .git
