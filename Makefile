@@ -19,14 +19,12 @@ vscode:
 	cat .vscode-oss/extensions.txt | xargs -L 1 codium --install-extension
 
 helix:
-	git clone https://github.com/helix-editor/helix helix-code
-	cp -R -n helix-code/* helix/
-	cd helix
-	rm -rf .git
+	@git clone https://github.com/helix-editor/helix helix-code
+	@mkdir -p $(PWD)/helix
+	@cp -R $(PWD)/helix-code/* $(PWD)/helix/
+	@cd helix && rm -rf .git
 	@echo "Building Helix"
-	cargo install --path helix-term --locked
+	@cd helix && cargo install --path helix-term --locked
 	@hx --health
 	@echo "Installing Catppuccin"
-	git clone git@github.com:catppuccin/helix.git catppuccin && cd catppuccin && rm -rf .git
-	@cd ../../
-	
+	@cd helix && git clone git@github.com:catppuccin/helix.git catppuccin && cd catppuccin && rm -rf .git
