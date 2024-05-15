@@ -17,6 +17,9 @@ export GEM_HOME="$HOME/.gem"
 # Python
 export PATH="$PATH:/Users/${USER}/Library/Python/3.9/bin"
 export HELIX_RUNTIME="~/.config/helix/runtime"
+
+# Java and android studio
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
