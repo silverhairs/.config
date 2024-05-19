@@ -17,7 +17,7 @@ export GEM_HOME="$HOME/.gem"
 # Python
 export PATH="$PATH:/Users/${USER}/Library/Python/3.9/bin"
 export HELIX_RUNTIME="~/.config/helix/runtime"
-
+export EDITOR="hx"
 # Java and android studio
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
 # Set name of the theme to load --- if set to "random", it will
@@ -135,3 +135,5 @@ eval "$(fzf --zsh)"
 
 # CodeWhisperer post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
+
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
