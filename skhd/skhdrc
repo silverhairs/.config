@@ -14,5 +14,5 @@ cmd + alt - l : yabai -m space --rotate 180
 cmd + alt - m : yabai -m window --toggle zoom-fullscreen
 
 # monitors
-cmd + shift - right : yabai -m display --focus recent
-cmd + shift - left : yabai -m display --focus prev
+cmd + alt + shift - right : yabai -m display --focus recent
+cmd + alt + shift - left : yabai -m display --focus prev
