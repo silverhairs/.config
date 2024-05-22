@@ -3,3 +3,16 @@ cmd + alt - down : yabai -m window --focus south
 cmd + alt - up : yabai -m window --focus north
 cmd + alt - left : yabai -m window --focus west
 cmd + alt - right : yabai -m window --focus east
+
+# float focused window
+cmd + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# rotate screen layout
+cmd + alt - l : yabai -m space --rotate 180
+
+# toggle fullscreen
+cmd + alt - m : yabai -m window --toggle zoom-fullscreen
+
+# monitors
+cmd + shift - right : yabai -m display --focus recent
+cmd + shift - left : yabai -m display --focus prev
