@@ -3,14 +3,18 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export PATH="$PATH:/opt/homebrew/bin"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export _ZO_DATA_DIR="/Users/${USER}/.local/share"
+
 # Path to Flutter and dart
 export PATH="$PATH:/Users/${USER}/fvm/default/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH:/Users/${USER}/.gem/bin"
 export PATH="$PATH":"$HOME/zig"
+
 # Android
 export PATH="$PATH:/Users/${USER}/Library/Android/sdk/platform-tools/"
 export GEM_HOME="$HOME/.gem"
@@ -18,8 +22,10 @@ export GEM_HOME="$HOME/.gem"
 export PATH="$PATH:/Users/${USER}/Library/Python/3.9/bin"
 export HELIX_RUNTIME="~/.config/helix/runtime"
 export EDITOR="hx"
+
 # Java and android studio
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -41,11 +47,11 @@ ZSH_THEME="kolo"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
