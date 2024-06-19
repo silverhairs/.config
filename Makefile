@@ -11,7 +11,7 @@ symlinks:
 	ln -s $(PWD)/zsh/.zshrc ${HOME}/.zshrc
 
 vscode-extensions:
-	cat .vscode-oss/extensions.txt | xargs -L 1 codium --install-extension
+	cat ~/.vscode-oss/extensions.txt | xargs -L 1 codium --install-extension
 
 vscode:
 	ln -s $(PWD)/.vscode-oss ${HOME}/.vscode-oss
