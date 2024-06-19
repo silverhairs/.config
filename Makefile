@@ -1,8 +1,10 @@
 .PHONY: install symlinks vscode-extensions vscode helix
 
 install:
+	@test -d "~/.zshrc" || ln -s $(PWD)/zsh/.zshrc ~/.zshrc
+	@brew --version || sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	-brew bundle
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	@sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 	make helix
 
@@ -11,7 +13,8 @@ symlinks:
 	ln -s $(PWD)/zsh/.zshrc ${HOME}/.zshrc
 
 vscode-extensions:
-	cat ~/.vscode-oss/extensions.txt | xargs -L 1 codium --install-extension
+	@test -d "~/.vscode-oss" || ln -s $(PWD)/.vscode-oss ~/.vscode-oss
+	@cat ~/.vscode-oss/extensions.txt | xargs -L 1 codium --install-extension
 
 vscode:
 	ln -s $(PWD)/.vscode-oss ${HOME}/.vscode-oss
