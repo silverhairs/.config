@@ -68,12 +68,12 @@ Requires the following fonts to be downloaded and installed in the system:
   "dart.flutterSdkPath": ".fvm/flutter_sdk",
   "dart.openDevTools": "flutter",
   "debug.allowBreakpointsEverywhere": true,
-  "debug.console.fontFamily": "Geist Mono, SF Mono",
+  "debug.console.fontFamily": "'Iosevka','JetBrains Mono','Geist Mono', SF Mono",
   "debug.console.fontSize": 17,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
   "editor.cursorBlinking": "expand",
-  "editor.fontFamily": "DM Mono, MonoLisa, Geist Mono, 'SF Mono','Dank Mono','SpaceMono Nerd Font', MonoLisa,  'Space Mono for Powerline', Nova",
+  "editor.fontFamily": "'Operator Mono','Geist Mono','JetBrains Mono', DM Mono, MonoLisa, Geist Mono, 'SF Mono','Dank Mono','SpaceMono Nerd Font', MonoLisa,  'Space Mono for Powerline', Nova",
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
   "editor.formatOnSave": true,
@@ -166,24 +166,23 @@ Requires the following fonts to be downloaded and installed in the system:
     "*.class": "default"
   },
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Catppuccin Mocha",
   "kotlin.languageServer.enabled": false,
   "kotlin.debugAdapter.enabled": false,
   "C_Cpp.intelliSenseEngine": "disabled",
   "security.workspace.trust.untrustedFiles": "open",
-  "kotlin.java.home": "/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home",
-  "java.configuration.runtimes": [
-    {
-      "name": "JavaSE-1.8",
-      "path": "/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home"
-    }
-  ],
+  "kotlin.java.home": "$JAVA_HOME",
+  // "java.configuration.runtimes": [
+  //   {
+  //     "name": "JavaSE-17",
+  //     "path": "/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+  //   }
+  // ],
   // java.jdt.ls.java.home
   "maven.terminal.useJavaHome": true,
   "react-native-tools.showUserTips": false,
   "update.mode": "start",
   "git.openRepositoryInParentFolders": "never",
-  "java.import.gradle.user.home": "/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home",
+  "java.import.gradle.user.home": "$JAVA_HOME",
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 3000,
   "vs-kubernetes": {
@@ -215,5 +214,6 @@ Requires the following fonts to be downloaded and installed in the system:
   },
   "cmake.showOptionsMovedNotification": false,
   "editor.inlineSuggest.suppressSuggestions": true,
-  "workbench.activityBar.location": "hidden"
+  "workbench.activityBar.location": "hidden",
+  "workbench.colorTheme": "Catppuccin Mocha"
 }
