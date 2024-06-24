@@ -172,19 +172,20 @@ __Some of them might be available in github.com/silverhairs/fonts__
   "kotlin.debugAdapter.enabled": false,
   "C_Cpp.intelliSenseEngine": "disabled",
   "security.workspace.trust.untrustedFiles": "open",
-  "kotlin.java.home": "$JAVA_HOME",
-  // "java.configuration.runtimes": [
-  //   {
-  //     "name": "JavaSE-17",
-  //     "path": "/Applications/Android Studio.app/Contents/jbr/Contents/Home"
-  //   }
-  // ],
-  // java.jdt.ls.java.home
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-17",
+      "path": "~/Library/Java/JavaVirtualMachines/amazon-corretto-17.jdk/Contents/Home"
+    }
+  ],
+  "java.jdt.ls.java.home": "~/Library/Java/JavaVirtualMachines/amazon-corretto-17.jdk/Contents/Home",
+  "java.import.gradle.user.home": "~/.gradle",
+  "java.import.gradle.java.home": "${JAVA_HOME}",
   "maven.terminal.useJavaHome": true,
+  "kotlin.java.home": "${JAVA_HOME}",
   "react-native-tools.showUserTips": false,
   "update.mode": "start",
   "git.openRepositoryInParentFolders": "never",
-  "java.import.gradle.user.home": "$JAVA_HOME",
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 3000,
   "vs-kubernetes": {
@@ -214,8 +215,13 @@ __Some of them might be available in github.com/silverhairs/fonts__
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
+  "[caddyfile]": {
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true
+  },
   "cmake.showOptionsMovedNotification": false,
   "editor.inlineSuggest.suppressSuggestions": true,
   "workbench.activityBar.location": "hidden",
-  "workbench.colorTheme": "Catppuccin Mocha"
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "java.import.gradle.home": "~/.gradle"
 }
