@@ -3,9 +3,9 @@
 install:
 	@test -d "~/.zshrc" || ln -s $(PWD)/zsh/.zshrc ~/.zshrc
 	@brew --version || sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	-brew bundle
+	@brew bundle
 	@sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-	curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+	@curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 	make helix
 
 symlinks:
