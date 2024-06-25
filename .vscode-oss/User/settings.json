@@ -116,7 +116,7 @@ __Some of them might be available in github.com/silverhairs/fonts__
   },
   "git.autofetch": true,
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "plaintext": false,
     "markdown": false,
     "scminput": false,

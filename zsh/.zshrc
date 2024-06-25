@@ -94,7 +94,7 @@ zstyle ':omz:update' frequency 13
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.zsh-alias
+source ~/.config/zsh/.zsh-alias
 source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
 source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 source $HOME/.zsh_SECRETS

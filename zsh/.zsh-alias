@@ -4,5 +4,4 @@ alias pip="pip3"
 eval $(thefuck --alias)
 alias wtf="fuck"
 alias img="kitty +kitten icat"
-alias cd="z"
 alias code="codium"
