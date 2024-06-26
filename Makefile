@@ -7,6 +7,7 @@ install:
 	@test -d "~/.zshrc" || ln -s $(PWD)/zsh/.zshrc ~/.zshrc
 	@brew --version || sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	@brew bundle
+	@ln -s $(PWD)/delta/.gitconfig ${HOME}/.gitconfig
 	@sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	@curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 	make helix
@@ -58,4 +59,7 @@ catppuccin:
 				gsed -i '/theme =/c\theme = "catppuccin_$(call lowercase, $(flavor))"' ~/.config/helix/config.toml && \
 				echo "Setting Catppuccin $(flavor) as theme for VSCodium..." && \
 					gsed -i '/workbench.colorTheme/c\"workbench.colorTheme": "Catppuccin $(flavor)",' ~/.config/.vscode-oss/User/settings.json && \
-					echo "you are all set! 🚀"
+					echo "Setting catppuccin-$(call lowercase, $(flavor)) as theme for delta..." && \
+						gsed -i '/features/c\features = catppuccin-$(call lowercase, $(flavor))' ~/.config/delta/.gitconfig && \
+						echo "You are all set! 🚀"
+					

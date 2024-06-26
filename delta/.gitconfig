@@ -1,0 +1,28 @@
+[include]
+	path = "~/.config/delta/themes/catppuccin/catppuccin.gitconfig"
+[user]
+	name = Boris Kayi
+	email = hello@silverhairs.engineer
+	
+[core]
+	editor = "hx"
+	pager = delta
+	
+[delta]
+features = catppuccin-latte
+	side-by-side = true
+
+[interactive]
+	diffFilter = delta --color-only
+	
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
