@@ -1,8 +1,10 @@
 # .config
 
-Still a couple of configs missing, will add them soon, as well as a script to set this up quickly
+Personal MacOS dotfiles based on Homebrew and zsh.
 
 ## Getting Started
+All you need to know is written in the Makefile
+
 ```sh
 $ make install
 ```
