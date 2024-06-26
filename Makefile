@@ -56,4 +56,6 @@ catppuccin:
 			gsed -i '/theme/c\--theme="Catppuccin $(flavor)"' ~/.config/bat/config && \
 			echo "Setting catppuccin_$(call lowercase, $(flavor)) as theme for helix..." && \
 				gsed -i '/theme =/c\theme = "catppuccin_$(call lowercase, $(flavor))"' ~/.config/helix/config.toml && \
-				echo "you are all set! 🚀"
+				echo "Setting Catppuccin $(flavor) as theme for VSCodium..." && \
+					gsed -i '/workbench.colorTheme/c\"workbench.colorTheme": "Catppuccin $(flavor)",' ~/.config/.vscode-oss/User/settings.json && \
+					echo "you are all set! 🚀"
