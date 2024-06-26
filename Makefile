@@ -1,4 +1,7 @@
-.PHONY: install symlinks vscode-extensions vscode helix fonts
+flavor ?= Mocha
+lowercase = $(shell echo $(1) | tr '[:upper:]' '[:lower:]')
+
+.PHONY: install symlinks vscode-extensions vscode helix fonts catppuccin
 
 install:
 	@test -d "~/.zshrc" || ln -s $(PWD)/zsh/.zshrc ~/.zshrc
@@ -45,3 +48,12 @@ fonts:
 		-exec cp {} ~/Library/Fonts/ \; -exec echo {} \;
 	@rm -rf fonts
 	@echo "Fonts installed, You are all set!"
+
+catppuccin:
+	@echo "Setting Catppuccin $(flavor) as theme for kitty..." && \
+		kitty +kitten themes --reload-in=all Catppuccin-$(flavor) && \
+		echo "Setting Catppuccin $(flavor) as theme for bat..." && bat cache --build && \
+			gsed -i '/theme/c\--theme="Catppuccin $(flavor)"' ~/.config/bat/config && \
+			echo "Setting catppuccin_$(call lowercase, $(flavor)) as theme for helix..." && \
+				gsed -i '/theme =/c\theme = "catppuccin_$(call lowercase, $(flavor))"' ~/.config/helix/config.toml && \
+				echo "you are all set! 🚀"
