@@ -40,6 +40,7 @@ helix:
 		git clone git@github.com:catppuccin/helix.git catppuccin && \
 		cd catppuccin && rm -rf .git || \
 		echo "✅ Catppuccin already installed"
+	@launchctl setenv EDITOR ~/.cargo/bin/hx
 	@echo "🚀 Helix installation completed successfully!! 🚀"
 
 fonts:

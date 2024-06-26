@@ -222,6 +222,7 @@ __Some of them might be available in github.com/silverhairs/fonts__
   "cmake.showOptionsMovedNotification": false,
   "editor.inlineSuggest.suppressSuggestions": true,
   "workbench.activityBar.location": "hidden",
-"workbench.colorTheme": "Catppuccin Latte",
-  "java.import.gradle.home": "~/.gradle"
+  "workbench.colorTheme": "Catppuccin Latte",
+  "java.import.gradle.home": "~/.gradle",
+  "security.promptForLocalFileProtocolHandling": false
 }
