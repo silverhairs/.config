@@ -1,4 +1,4 @@
-.PHONY: install symlinks vscode-extensions vscode helix
+.PHONY: install symlinks vscode-extensions vscode helix fonts
 
 install:
 	@test -d "~/.zshrc" || ln -s $(PWD)/zsh/.zshrc ~/.zshrc
@@ -37,3 +37,11 @@ helix:
 		cd catppuccin && rm -rf .git || \
 		echo "✅ Catppuccin already installed"
 	@echo "🚀 Helix installation completed successfully!! 🚀"
+
+fonts:
+	@git clone git@github.com:silverhairs/fonts.git
+	@echo "installing fonts..." && \
+		find ./fonts -type f \( -name "*.ttf" -o -name "*.otf" -o -name "*.woff" -o -name "*.woff2" -o -name "*.eot" \) \
+		-exec cp {} ~/Library/Fonts/ \; -exec echo {} \;
+	@rm -rf fonts
+	@echo "Fonts installed, You are all set!"
