@@ -9,7 +9,7 @@
 	pager = delta
 	
 [delta]
-features = catppuccin-latte
+	features = catppuccin-latte
 	side-by-side = true
 
 [interactive]
