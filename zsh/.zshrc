@@ -142,3 +142,4 @@ export PATH="/opt/homebrew/opt/openssl@3.0/bin:$PATH"
 
 # Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+export HOMEBREW_NO_ENV_HINTS=0
