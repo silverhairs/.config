@@ -149,7 +149,8 @@ __Some of them might be available in github.com/silverhairs/fonts__
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1",
-    "CW_NEW_SESSION": "1"
+    "CW_NEW_SESSION": "1",
+    "Q_NEW_SESSION": "1"
   },
   "terminal.integrated.fontFamily": "Geist Mono, SF Mono",
   "terminal.integrated.fontSize": 17,
@@ -222,7 +223,7 @@ __Some of them might be available in github.com/silverhairs/fonts__
   "cmake.showOptionsMovedNotification": false,
   "editor.inlineSuggest.suppressSuggestions": true,
   "workbench.activityBar.location": "hidden",
-  "workbench.colorTheme": "Catppuccin Latte",
+"workbench.colorTheme": "Catppuccin Latte",
   "java.import.gradle.home": "~/.gradle",
   "security.promptForLocalFileProtocolHandling": false
 }
