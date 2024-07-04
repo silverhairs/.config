@@ -5,3 +5,9 @@ eval $(thefuck --alias)
 alias wtf="fuck"
 alias img="kitty +kitten icat"
 alias code="codium"
+
+fbat () {
+	local file
+	file=$(fzf)
+	[ -n "$file" ] && bat "$file"
+}
