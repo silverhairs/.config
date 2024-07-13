@@ -4,6 +4,7 @@ theme = "catppuccin_latte"
 line-number ="absolute"
 cursorline = true
 color-modes = true
+auto-save = true
 
 [editor.cursor-shape]
 insert = "bar"
