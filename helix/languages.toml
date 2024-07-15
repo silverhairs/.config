@@ -474,10 +474,12 @@ source = { git = "https://github.com/Joakker/tree-sitter-json5", rev = "c23f7a9b
 name = "c"
 scope = "source.c"
 injection-regex = "c"
-file-types = ["c"] # TODO: ["h"]
+file-types = ["c", "h"]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
 language-servers = [ "clangd" ]
+auto-format = true
+formatter = [ "clang-format" ]
 indent = { tab-width = 2, unit = "  " }
 
 [language.debugger]
