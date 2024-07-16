@@ -80,6 +80,7 @@ __Some of them might be available in github.com/silverhairs/fonts__
   "editor.fontSize": 18,
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
+  "debug.toolBarLocation": "commandCenter",
   "editor.suggestSelection": "first",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
