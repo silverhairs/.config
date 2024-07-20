@@ -26,7 +26,7 @@ export HELIX_RUNTIME="~/.config/helix/runtime"
 export EDITOR="hx"
 
 # Java and android studio
-export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+export JAVA_HOME="$HOME/Applications/Android Studio.app/Contents/jbr/Contents/Home"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -143,6 +143,9 @@ export PATH="/opt/homebrew/opt/openssl@3.0/bin:$PATH"
 
 # Q post block. Keep at the bottom of this file.
 export HOMEBREW_NO_ENV_HINTS=0
+
+
+export CHROME_EXECUTABLE=/Applications/Arc.app/Contents/MacOS/Arc
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

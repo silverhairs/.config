@@ -195,7 +195,7 @@ __Some of them might be available in github.com/silverhairs/fonts__
     "vscode-kubernetes.helm-path.mac": "/Users/silverhairs/.vs-kubernetes/tools/helm/darwin-arm64/helm"
   },
   "lldb.library": "/Applications/Xcode-15.0.0.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
-  "window.commandCenter": false,
+  "window.commandCenter": true,
   "workbench.layoutControl.enabled": false,
   "liveshare.allowGuestDebugControl": true,
   "liveshare.allowGuestTaskControl": true,
