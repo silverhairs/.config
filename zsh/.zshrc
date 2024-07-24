@@ -16,6 +16,7 @@ export PATH="$PATH:/Users/${USER}/fvm/default/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH:/Users/${USER}/.gem/bin"
 export PATH="$PATH":"$HOME/zig"
+export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
 
 # Android
 export PATH="$PATH:/Users/${USER}/Library/Android/sdk/platform-tools/"
