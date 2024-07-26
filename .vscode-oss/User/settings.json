@@ -26,6 +26,8 @@ __Some of them might be available in github.com/silverhairs/fonts__
     "editor.selectionHighlight": false,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
+    "editor.minimap.showRegionSectionHeaders": true,
+    "editor.minimap.showMarkSectionHeaders": true,
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": "off",
     "editor.codeActionsOnSave": {
@@ -74,6 +76,8 @@ __Some of them might be available in github.com/silverhairs/fonts__
   "debug.console.fontSize": 17,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 4,
   "editor.cursorBlinking": "expand",
   "editor.fontFamily": "'Operator Mono','Geist Mono','JetBrains Mono', DM Mono, MonoLisa, Geist Mono, 'SF Mono','Dank Mono','SpaceMono Nerd Font', MonoLisa,  'Space Mono for Powerline', Nova",
   "editor.fontLigatures": true,
