@@ -42,6 +42,8 @@ helix:
 		echo "✅ Catppuccin already installed"
 	@launchctl setenv EDITOR ~/.cargo/bin/hx
 	@echo "🚀 Helix installation completed successfully!! 🚀"
+	@echo "Building grammars!"
+	@hx --grammar fetch && hx --grammar build
 
 fonts:
 	@git clone git@github.com:silverhairs/fonts.git
