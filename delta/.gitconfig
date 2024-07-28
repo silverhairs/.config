@@ -7,7 +7,7 @@
 	editor = "hx"
 	pager = delta
 [delta]
-	features = catppuccin-latte
+	features = catppuccin-mocha
 	side-by-side = true
 	hyperlinks = true
 	hyperlinks-file-link-format = "file-line://{path}:{line}"
