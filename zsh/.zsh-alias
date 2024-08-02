@@ -11,3 +11,13 @@ fbat () {
 	file=$(fzf)
 	[ -n "$file" ] && bat "$file"
 }
+
+simulator() {
+	UDID=$(xcrun simctl list devices | grep -E 'Booted|Shut' | head -n 1 | awk '{print $2}' | tr -d '()')
+	if [ -n "$UDID" ]; then
+		xcrun simctl boot "$UDID"
+		open -a Simulator --args -CurrentDeviceUDID "$UDID"
+	else
+		echo "No available simulators found."
+	fi
+}
