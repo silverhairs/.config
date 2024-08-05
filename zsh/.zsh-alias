@@ -22,3 +22,19 @@ simulator() {
 		echo "No available simulators found."
 	fi
 }
+
+light () {
+	local origin=$(pwd)
+	cd ~/.config
+	make catppuccin flavor=Latte
+	cd "$origin"
+	osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to false'
+}
+
+dark () {
+	local origin=$(pwd)
+	cd ~/.config
+	make catppuccin flavor=Mocha
+	cd "$origin"
+	osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to true'
+}
