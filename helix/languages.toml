@@ -763,6 +763,8 @@ comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
 language-servers = [ "typescript-language-server" ]
 indent = { tab-width = 2, unit = "  " }
+formatter = { command = "dprint", args = ["fmt", "--stdin", "tsx"]}
+auto-format = true
 
 [[grammar]]
 name = "typescript"
