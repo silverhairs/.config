@@ -13,8 +13,6 @@ This command will install the packages below in your system:
 - [x] [yabai](https://github.com/koekeishiya/yabai)
 - [x] [skhd](https://github.com/koekeishiya/skhd)
 - [x] [kitty](https://github.com/kovidgoyal/kitty)
-- [x] [tmux](https://github.com/tmux/tmux)
-- [x] [neovim](https://neovim.io/)
 - [x] [gh](https://cli.github.com/)
 - [x] [thefuck](https://github.com/nvbn/thefuck)
 - [x] [fig](https://fig.io/)
