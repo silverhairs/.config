@@ -4,7 +4,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export PATH="$PATH:/opt/homebrew/bin"
+export PATH="/opt/homebrew/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/openssl@3.0/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/openssl@3.0/include"
 # Path to your oh-my-zsh installation.
