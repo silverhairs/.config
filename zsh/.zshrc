@@ -5,8 +5,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PATH="/opt/homebrew/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/openssl@3.0/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/openssl@3.0/include"
+# export LDFLAGS="-L/opt/homebrew/opt/openssl@3.0/lib"
+# export CPPFLAGS="-I/opt/homebrew/opt/openssl@3.0/include"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export _ZO_DATA_DIR="/Users/${USER}/.local/share"
