@@ -6,6 +6,7 @@ alias wtf="fuck"
 alias img="kitty +kitten icat"
 alias code="codium"
 alias htop="btop"
+alias work="nohup kitty --session flutter.conf & disown"
 
 fbat () {
 	local file
