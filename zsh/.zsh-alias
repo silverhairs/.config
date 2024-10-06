@@ -7,6 +7,7 @@ alias img="kitty +kitten icat"
 alias code="codium"
 alias htop="btop"
 alias work="nohup kitty --session flutter.conf & disown"
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-user --no-permissions --no-time --no-user"
 
 fbat () {
 	local file
