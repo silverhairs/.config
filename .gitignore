@@ -7,7 +7,6 @@ configstore/
 **/*.lock
 iterm2/
 .DS_Store
-tmux/
 kitty/termpdf.py/
 **/*_compiled.lua
 **/__pycache__/
