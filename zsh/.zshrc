@@ -29,6 +29,7 @@ export EDITOR="hx"
 # Java and android studio
 export JAVA_HOME="$HOME/Applications/Android Studio.app/Contents/jbr/Contents/Home"
 
+export TMUX_CONF=~/.config/tmux/.tmux.conf
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
