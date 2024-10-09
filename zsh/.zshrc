@@ -8,6 +8,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export _ZO_DATA_DIR="/Users/${USER}/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # Path to Flutter and dart
 export PATH="$PATH:/Users/${USER}/fvm/default/bin"
