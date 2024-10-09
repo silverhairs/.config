@@ -46,3 +46,5 @@ cody-ai/
 
 *.bak
 fish/
+vim/
+.viminfo
