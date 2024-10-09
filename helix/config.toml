@@ -5,6 +5,7 @@ line-number = "relative"
 cursorline = true
 color-modes = true
 auto-save = true
+mouse = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -16,3 +17,6 @@ render = true
 
 [editor.file-picker]
 hidden = false
+
+[editor.statusline]
+center = ["version-control", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
