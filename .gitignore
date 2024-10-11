@@ -48,3 +48,4 @@ cody-ai/
 fish/
 vim/
 .viminfo
+.dart-cli-completion/
