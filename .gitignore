@@ -46,6 +46,11 @@ cody-ai/
 
 *.bak
 fish/
+<<<<<<< HEAD
 vim/
 .viminfo
 .dart-cli-completion/
+||||||| parent of 6c5113f (chore: update helix configs for kotlin)
+=======
+*/**/cache
+>>>>>>> 6c5113f (chore: update helix configs for kotlin)

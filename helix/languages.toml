@@ -1818,6 +1818,7 @@ comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
 indent = { tab-width = 4, unit = "    " }
 language-servers = [ "kotlin-language-server" ]
+formatter = { command = "ktlint", args = ["-F", "--stdin"]}
 
 [[grammar]]
 name = "kotlin"

@@ -6,6 +6,7 @@ cursorline = true
 color-modes = true
 auto-save = true
 mouse = true
+bufferline = "multiple"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -20,3 +21,12 @@ hidden = false
 
 [editor.statusline]
 center = ["version-control", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+
+# [editor.statusline]
+# right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+
+[editor.lsp]
+display-messages = true
+
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]
