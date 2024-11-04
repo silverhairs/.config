@@ -21,9 +21,10 @@ vscode-extensions:
 	@cat ~/.vscode-oss/extensions.txt | xargs -L 1 codium --install-extension
 
 vscode:
-	ln -s $(PWD)/.vscode-oss ${HOME}/.vscode-oss
+	ln -s $(XDG_CONFIG_HOME)/.vscode-oss ~/.vscode-oss
 	brew install --cask vscodium
-	cp -R $(PWD)/.vscode-oss/User ~/Library/Application\ Support/VSCodium/User
+	rm -rf ~/Library/Application\ Support/VSCodium/User
+	ln -s ~/.vscode-oss/User ~/Library/Application\ Support/VSCodium/User
 	cat .vscode-oss/extensions.txt | xargs -L 1 codium --install-extension
 
 helix:
@@ -33,6 +34,8 @@ helix:
 	@rm -rf $(PWD)/helix-code
 	@cd helix && rm -rf .git
 	@echo "Building Helix"
+	@curl https://sh.rustup.rs -sSf | sh
+	@source ~/.cargo/env
 	@cd helix && export HELIX_DISABLE_AUTO_GRAMMAR_BUILD=1 && cargo install --path helix-term --locked
 	@hx --health
 	@echo "🎨 Installing Catppuccin 🎨"
