@@ -6,7 +6,7 @@ cursorline = true
 color-modes = true
 auto-save = true
 mouse = true
-bufferline = "multiple"
+# bufferline = "multiple"
 
 [editor.cursor-shape]
 insert = "bar"
