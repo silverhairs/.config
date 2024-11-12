@@ -17,6 +17,13 @@ return require('packer').startup(function(use)
 	use({'neovim/nvim-lspconfig'})
 	use({'hrsh7th/nvim-cmp'})
 	use({'hrsh7th/cmp-nvim-lsp'})
+    use{
+        'nvim-flutter/flutter-tools.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim',
+        }
+    }
     use({'j-hui/fidget.nvim', tag='v1.0.0'})
 	use {
 		"utilyre/barbecue.nvim", tag="*",
