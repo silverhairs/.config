@@ -144,3 +144,4 @@ export PATH="/opt/homebrew/opt/openssl@3.0/bin:$PATH"
 # Q post block. Keep at the bottom of this file.
 export HOMEBREW_NO_ENV_HINTS=0
 export PATH="/opt/homebrew/opt/vim/bin:$PATH"
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
