@@ -339,5 +339,15 @@ __Some of them might be available in github.com/silverhairs/fonts__
   "workbench.colorTheme": "Catppuccin Mocha",
   "java.import.gradle.home": "~/.gradle",
   "security.promptForLocalFileProtocolHandling": false,
-  "dart.showTodos": true
+  "dart.showTodos": true,
+  "database-client.autoSync": true,
+  "terminal.integrated.allowedLinkSchemes": [
+    "file",
+    "http",
+    "https",
+    "mailto",
+    "vscode",
+    "vscode-insiders",
+    "file-line"
+  ]
 }
