@@ -67,5 +67,7 @@ catppuccin:
 					gsed -i '/workbench.colorTheme/c\"workbench.colorTheme": "Catppuccin $(flavor)",' ~/.config/.vscode-oss/User/settings.json && \
 					echo "Setting catppuccin-$(call lowercase, $(flavor)) as theme for delta..." && \
 						gsed -i '/features/c\\tfeatures = catppuccin-$(call lowercase, $(flavor))' ~/.config/delta/.gitconfig && \
-						echo "You are all set! 🚀"
-					
+						echo "Setting catppuccin-$(flavor) as theme for Ghostty..." && \
+							gsed -i '/theme =/c\theme = "catppuccin-$(call lowercase, $(flavor))"' ~/.config/ghostty/config && \
+							echo "You are all set! 🚀"
+						
