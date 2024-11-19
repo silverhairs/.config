@@ -1,7 +1,7 @@
 
 ## [fvm]
 ## Completion config for "fvm"
-[[ -f /Users/$USER/.config/.dart-cli-completion/fvm.zsh ]] && . /Users/silverhairs/.config/.dart-cli-completion/fvm.zsh || true
+[[ -f /Users/$USER/.config/.dart-cli-completion/fvm.zsh ]] && . /Users/$USER/.config/.dart-cli-completion/fvm.zsh || true
 ## [/fvm]
 
 
