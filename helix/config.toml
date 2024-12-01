@@ -30,3 +30,6 @@ display-messages = true
 
 [editor.gutters]
 layout = ["diff", "diagnostics", "line-numbers", "spacer"]
+
+[keys.normal]
+C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
