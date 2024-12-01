@@ -50,3 +50,4 @@ vim/
 .viminfo
 .dart-cli-completion/
 */**/cache
+btop/
