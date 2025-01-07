@@ -17,6 +17,7 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH:/Users/${USER}/.gem/bin"
 export PATH="$PATH":"$HOME/zig"
 export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
+export PATH="$PATH:/opt/homebrew/anaconda3/bin"
 
 # Android
 export PATH="$PATH:/Users/${USER}/Library/Android/sdk/platform-tools/"
@@ -25,7 +26,7 @@ export GEM_HOME="$HOME/.gem"
 export PATH="$PATH:/Users/${USER}/Library/Python/3.9/bin"
 export HELIX_RUNTIME="~/.config/helix/runtime"
 export EDITOR="hx"
-
+export DELTA_PAGER="less -F -S -R -i -+X"
 export TMUX_CONF=~/.config/tmux/.tmux.conf
 
 # Java and android studio

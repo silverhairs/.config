@@ -4,7 +4,6 @@ alias pip="pip3"
 eval $(thefuck --alias)
 alias wtf="fuck"
 alias img="kitty +kitten icat"
-alias code="codium"
 alias htop="btop"
 alias work="nohup kitty --session work.conf & disown"
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-user --no-permissions --no-time --no-user"

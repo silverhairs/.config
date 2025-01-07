@@ -51,3 +51,5 @@ vim/
 .dart-cli-completion/
 */**/cache
 btop/
+.aws/
+composer/
