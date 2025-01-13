@@ -889,6 +889,7 @@ shebangs = ["python", "uv"]
 roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
 comment-token = "#"
 language-servers = ["ruff", "jedi", "pylsp"]
+auto-format = true
 # TODO: pyls needs utf-8 offsets
 indent = { tab-width = 4, unit = "    " }
 
@@ -2938,6 +2939,7 @@ injection-regex = "sage"
 comment-token = "#"
 indent = { tab-width = 4, unit = "    " }
 grammar = "python"
+formatter = { command = "ruff" , args = [ "format" ] }
 
 [[language]]
 name = "msbuild"
