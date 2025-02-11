@@ -1,10 +1,10 @@
-theme = "catppuccin-mocha"
-background-opacity = 0.9
-background-blur-radius = 20
+theme = "Hardcore"
+background-opacity = 1
+# background-blur-radius = 20
 
 mouse-hide-while-typing = true
 macos-titlebar-style = hidden
 shell-integration = zsh
 cursor-style = bar
 
-custom-shader = ./shaders/cubes.glsl
+# custom-shader = ./shaders/cubes.glsl
