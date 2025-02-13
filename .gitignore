@@ -53,3 +53,5 @@ vim/
 btop/
 .aws/
 composer/
+.very_good_cli/
+.dart-cli-completion
