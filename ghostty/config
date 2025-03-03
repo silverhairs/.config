@@ -7,4 +7,6 @@ macos-titlebar-style = hidden
 shell-integration = zsh
 cursor-style = bar
 
+font-family = "Iosevka"
+
 # custom-shader = ./shaders/cubes.glsl
