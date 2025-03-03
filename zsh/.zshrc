@@ -46,7 +46,7 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(thefuck --alias)"
 eval "$(rbenv init -)"
 eval "$(fzf --zsh)"
-eval "$(starship init zsh)"
+eval "$(oh-my-posh init zsh)"
 
 ## [Completion] 
 ## Completion scripts setup. Remove the following line to uninstall
