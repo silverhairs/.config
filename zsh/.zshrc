@@ -30,7 +30,9 @@ export DELTA_PAGER="less -F -S -R -i -+X"
 export TMUX_CONF=~/.config/tmux/.tmux.conf
 
 # Java and android studio
-export JAVA_HOME="$HOME/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
+export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 
 export HOMEBREW_NO_ENV_HINTS=0
@@ -57,3 +59,7 @@ eval "$(oh-my-posh init zsh)"
 [[ ! -r /Users/${USER}/.opam/opam-init/init.zsh ]] || source /Users/${USER}/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 . "$HOME/.local/bin/env"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

@@ -4,6 +4,7 @@ let mapleader=" "
 " https://github.com/JetBrains/ideavim/wiki/IdeaVim-Plugins
 set clipboard+=unnamed
 set clipboard+=ideaput
+set relativenumber
 set ideajoin
 set idearefactormode=keep
 set incsearch
