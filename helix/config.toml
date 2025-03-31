@@ -10,7 +10,7 @@ end-of-line-diagnostics = "hint"
 # bufferline = "multiple"
 
 [editor.inline-diagnostics]
-cursor-line = "error"
+cursor-line = "warning"
 
 [editor.cursor-shape]
 insert = "bar"
