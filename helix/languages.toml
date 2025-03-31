@@ -175,7 +175,7 @@ rangeVariableTypes = true
 command = "golangci-lint-langserver"
 
 [language-server.golangci-lint-lsp.config]
-command = ["golangci-lint", "run", "--out-format", "json", "--issues-exit-code=1"]
+command = ["golangci-lint", "run", "--output.json.path=stdout", "--show-stats=false", "--issues-exit-code=1"]
 
 
 [language-server.rust-analyzer]
@@ -541,12 +541,12 @@ source = { git = "https://github.com/Joakker/tree-sitter-json5", rev = "c23f7a9b
 name = "c"
 scope = "source.c"
 injection-regex = "c"
-file-types = ["c", "h"] 
+file-types = ["c", "h"] # TODO: ["h"]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
 language-servers = [ "clangd" ]
 auto-format = true
-formatter = ["clang-format"]
+formatter = [ "clang-format" ]
 indent = { tab-width = 2, unit = "  " }
 
 [language.debugger]
@@ -862,9 +862,8 @@ file-types = ["tsx"]
 roots = [ "package.json", "tsconfig.json" ]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = [ "eslint", "emmet-ls", "typescript-language-server", "tailwindcss-ls" ]
+language-servers = [ "typescript-language-server", "eslint", "tailwindcss-ls", "emmet-ls" ]
 formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
-auto-format = true
 indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]
@@ -1849,7 +1848,7 @@ source = { git = "https://github.com/tree-sitter/tree-sitter-regex", rev = "e1cf
 [[language]]
 name = "git-config"
 scope = "source.gitconfig"
-file-types = [{ glob = ".gitmodules" }, { glob = ".gitconfig" }, { glob = ".git/config" }, { glob = ".config/git/config" }]
+file-types = ["gitconfig", { glob = ".gitmodules" }, { glob = ".gitconfig" }, { glob = ".git/config" }, { glob = ".config/git/config" }]
 injection-regex = "git-config"
 comment-token = "#"
 indent = { tab-width = 4, unit = "\t" }
@@ -2791,6 +2790,7 @@ file-types = [
   "rng",
   "shproj",
   "tld",
+  { glob = "*.tm[Tt]heme" },
   "tmx",
   "vbproj.user",
   "vcxproj",
@@ -2884,15 +2884,18 @@ file-types = [
   # Systemd unit files
   "service",
   "automount",
+  "desktop",
   "device",
   "mount",
+  "nspawn",
   "path",
-  "service",
+  "scope",
   "slice",
   "socket",
   "swap",
   "target",
   "timer",
+  { glob = "systemd/**/*.conf" },
   # Podman quadlets
   "container",
   "volume",
@@ -4056,7 +4059,7 @@ source = { git = "https://gitlab.com/spade-lang/tree-sitter-spade", rev = "78bf0
 name = "amber"
 scope = "source.ab"
 file-types = ["ab"]
-comment-token = "//"
+comment-token = ["//", "///"]
 indent = { tab-width = 4, unit = "    " }
 
 [[grammar]]
@@ -4250,3 +4253,13 @@ formatter = {command = "tlafmt", args = ["--stdin"]}
 name = "tlaplus"
 source = { git = "https://github.com/tlaplus-community/tree-sitter-tlaplus", rev = "4ba91b07b97741a67f61221d0d50e6d962e4987e"}
 
+[[language]]
+name = "werk"
+scope = "source.werk"
+file-types = [ "werk", { glob = "Werkfile" } ]
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+
+[[grammar]]
+name = "werk"
+source = { git = "https://github.com/little-bonsai/tree-sitter-werk", rev = "92b0f7fe98465c4c435794a58e961306193d1c1e" }
