@@ -1085,6 +1085,7 @@ comment-token = "//"
 block-comment-tokens = [{start = "/**", end = "*/"}, {start = "/*", end = "*/"}]
 language-servers = [ "intelephense" ]
 indent = { tab-width = 4, unit = "    " }
+auto-format = true
 
 [[grammar]]
 name = "php"
