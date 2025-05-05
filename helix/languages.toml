@@ -335,7 +335,6 @@ file-types = ["rs"]
 roots = ["Cargo.toml", "Cargo.lock"]
 shebangs = ["rust-script", "cargo"]
 auto-format = true
-formatter = { command = "rustfmt" }
 comment-tokens = ["//", "///", "//!"]
 block-comment-tokens = [
   { start = "/*", end = "*/" },
@@ -1245,6 +1244,8 @@ file-types = [
 ]
 shebangs = ["sh", "bash", "dash", "zsh"]
 comment-token = "#"
+auto-format = true
+formatter = { command = "shfmt", args = ["-s"] }
 language-servers = ["bash-language-server"]
 indent = { tab-width = 2, unit = "  " }
 
@@ -2428,6 +2429,7 @@ comment-token = "--"
 block-comment-tokens = { start = "/*", end = "*/" }
 indent = { tab-width = 4, unit = "    " }
 injection-regex = "sql"
+language-servers = ["sqls"]
 
 [[grammar]]
 name = "sql"
