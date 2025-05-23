@@ -1097,7 +1097,7 @@ file-types = [
 shebangs = ["python", "uv"]
 roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
 auto-format = true
-formatter = { command = "ruff", args = ["format", "--quiet"] }
+formatter = { command = "pylsp", args = ["format", "--quiet"] }
 comment-token = "#"
 language-servers = ["ruff", "jedi", "pylsp"]
 # TODO: pyls needs utf-8 offsets
