@@ -13,7 +13,7 @@ alias battery="pmset -g batt | grep -Eo '\d+%'"
 alias lg="lazygit"
 alias uvm="uv run python manage.py"
 alias uvr="uv run"
-alias ssh="kitty +kitten ssh"
+# alias ssh="kitty +kitten ssh"
 alias curl="curlie"
 
 fbat () {
