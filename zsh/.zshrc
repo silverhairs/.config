@@ -35,7 +35,7 @@ export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
 export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 
-export HOMEBREW_NO_ENV_HINTS=0
+export HOMEBREW_NO_ENV_HINTS=1
 export PATH="/opt/homebrew/opt/vim/bin:$PATH"
 
 source ~/.config/zsh/.zsh-alias
@@ -50,13 +50,13 @@ eval "$(rbenv init -)"
 eval "$(fzf --zsh)"
 eval "$(oh-my-posh init zsh)"
 
-## [Completion] 
+## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /Users/${USER}/.dart-cli-completion/zsh-config.zsh ]] && . /Users/${USER}/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
 # opam configuration
-[[ ! -r /Users/${USER}/.opam/opam-init/init.zsh ]] || source /Users/${USER}/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+[[ ! -r /Users/${USER}/.opam/opam-init/init.zsh ]] || source /Users/${USER}/.opam/opam-init/init.zsh >/dev/null 2>/dev/null
 
 . "$HOME/.local/bin/env"
 
