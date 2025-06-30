@@ -7,7 +7,19 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Ayu Dark",
+  "terminal": {
+    "dock": "bottom",
+    "font_family": "Iosevka"
+  },
+  "agent": {
+    "model_parameters": [],
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash"
+    },
+    "version": "2"
+  },
+  "theme": "Gruvbox Dark Hard",
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "autosave": {
@@ -18,6 +30,12 @@
   "hover_popover_enabled": true,
   "formatter": "language_server",
   "lsp": {
+    "dart":{
+      "binary":{
+        "type": "dart",
+        "arguments": ["language-server", "--[protocol=lsp"]
+      },
+    },
     "gopls": {
       "initialization_options": {
         "hints": {

@@ -55,3 +55,8 @@ btop/
 composer/
 .very_good_cli/
 .dart-cli-completion
+colima/_lima
+colima/_templates
+colima/default/daemon
+github-copilot/
+zed/prompts/prompts-library-*
