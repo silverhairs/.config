@@ -9,7 +9,8 @@
 {
   "terminal": {
     "dock": "bottom",
-    "font_family": "Iosevka"
+    "font_family": "Monaspace Neon Var",
+    "line_height": "standard"
   },
   "agent": {
     "model_parameters": [],
@@ -30,11 +31,14 @@
   "hover_popover_enabled": true,
   "formatter": "language_server",
   "lsp": {
-    "dart":{
-      "binary":{
+    "dart": {
+      "binary": {
         "type": "dart",
-        "arguments": ["language-server", "--[protocol=lsp"]
-      },
+        "arguments": [
+          "language-server",
+          "--[protocol=lsp"
+        ]
+      }
     },
     "gopls": {
       "initialization_options": {
