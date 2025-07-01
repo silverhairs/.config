@@ -367,6 +367,7 @@ persistent-diagnostic-sources = ["rustc", "clippy"]
 '[' = ']'
 '"' = '"'
 '`' = '`'
+'<' = '>'
 
 [language.debugger]
 name = "lldb-dap"
