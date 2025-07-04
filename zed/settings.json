@@ -9,7 +9,7 @@
 {
   "terminal": {
     "dock": "bottom",
-    "font_family": "Monaspace Neon Var",
+    "font_family": "Iosevka",
     "line_height": "standard"
   },
   "agent": {
