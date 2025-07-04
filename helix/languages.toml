@@ -439,6 +439,7 @@ file-types = [
 comment-token = "#"
 language-servers = ["taplo", "tombi"]
 indent = { tab-width = 2, unit = "  " }
+auto-format = true
 
 [[grammar]]
 name = "toml"
@@ -463,6 +464,7 @@ scope = "source.proto"
 injection-regex = "proto"
 file-types = ["proto"]
 language-servers = ["buf", "pbkit", "protols"]
+auto-format = true
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
 indent = { tab-width = 2, unit = "  " }
