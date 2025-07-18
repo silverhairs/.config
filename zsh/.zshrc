@@ -35,6 +35,9 @@ export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
 export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 
+export PATH="/opt/homebrew/opt/php@8.2/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.2/sbin:$PATH"
+
 export HOMEBREW_NO_ENV_HINTS=1
 export PATH="/opt/homebrew/opt/vim/bin:$PATH"
 
