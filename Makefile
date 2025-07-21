@@ -4,7 +4,7 @@ lowercase = $(shell echo $(1) | tr '[:upper:]' '[:lower:]')
 .PHONY: install symlinks vscode-extensions vscode helix fonts catppuccin
 
 install:
-	@test -d "~/.zshrc" || ln -s $(PWD)/zsh/.zshrc ~/.zshrc
+	@if [ ! -f $(HOME)/.zshrc ] && [ ! -L $(HOME)/.zshrc ]; then ln -s $(PWD)/zsh/.zshrc $(HOME)/.zshrc; fi
 	@brew --version || sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	@brew bundle
 	@ln -s $(PWD)/delta/.gitconfig ${HOME}/.gitconfig
