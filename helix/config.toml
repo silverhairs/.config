@@ -25,7 +25,15 @@ render = true
 hidden = false
 
 [editor.statusline]
-center = ["version-control", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+center = [
+  "version-control",
+  "diagnostics",
+  "selections",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+]
 
 # [editor.statusline]
 # right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
@@ -38,4 +46,11 @@ display-inlay-hints = true
 layout = ["diff", "diagnostics", "line-numbers", "spacer"]
 
 [keys.normal]
-C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+C-g = [
+  ":write-all",
+  ":new",
+  ":insert-output lazygit",
+  ":buffer-close!",
+  ":redraw",
+  ":reload-all",
+]
