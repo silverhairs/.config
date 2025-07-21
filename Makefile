@@ -3,14 +3,61 @@ lowercase = $(shell echo $(1) | tr '[:upper:]' '[:lower:]')
 
 .PHONY: install symlinks vscode-extensions vscode helix fonts catppuccin
 
-install:
+install: install-dotfiles install-brew install-ohmyzsh install-kitty install-helix install-fonts install-themes
+
+install-dotfiles:
+	@echo "Symlinking dotfiles..."
 	@if [ ! -f $(HOME)/.zshrc ] && [ ! -L $(HOME)/.zshrc ]; then ln -s $(PWD)/zsh/.zshrc $(HOME)/.zshrc; fi
+	@if [ ! -f $(HOME)/.gitconfig ] && [ ! -L $(HOME)/.gitconfig ]; then ln -s $(PWD)/delta/.gitconfig $(HOME)/.gitconfig; fi
+
+install-brew:
+	@echo "Checking Homebrew..."
 	@brew --version || sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	@echo "Running brew bundle..."
 	@brew bundle
-	@ln -s $(PWD)/delta/.gitconfig ${HOME}/.gitconfig
-	@sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-	@curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-	make helix
+
+install-ohmyzsh:
+	@echo "Installing oh-my-zsh if needed..."
+	@if [ ! -d $(HOME)/.oh-my-zsh ]; then sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; else echo "oh-my-zsh already installed"; fi
+
+install-kitty:
+	@echo "Installing kitty if needed..."
+	@if ! command -v kitty >/dev/null 2>&1; then curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin; else echo "kitty already installed"; fi
+
+install-helix:
+	@echo "Installing Helix..."
+	@git clone https://github.com/helix-editor/helix helix-code
+	@mkdir -p $(PWD)/helix
+	@cp -R $(PWD)/helix-code/* $(PWD)/helix/
+	@rm -rf $(PWD)/helix-code
+	@cd helix && rm -rf .git
+	@echo "Building Helix"
+	@curl https://sh.rustup.rs -sSf | sh
+	@source ~/.cargo/env
+	@cd helix && export HELIX_DISABLE_AUTO_GRAMMAR_BUILD=1 && cargo install --path helix-term --locked
+	@hx --health
+	@echo "🎨 Installing Catppuccin 🎨"
+	@cd helix && [ ! -d "catppuccin" ] && \
+		git clone git@github.com:catppuccin/helix.git catppuccin && \
+		cd catppuccin && rm -rf .git || \
+		echo "✅ Catppuccin already installed"
+	@launchctl setenv EDITOR ~/.cargo/bin/hx
+	@echo "🚀 Helix installation completed successfully!! 🚀"
+	@echo "Building grammars!"
+	@hx --grammar fetch && hx --grammar build
+
+install-fonts:
+	@echo "Installing fonts..."
+	@git clone git@github.com:silverhairs/fonts.git
+	@echo "installing fonts..." && \
+		find ./fonts -type f \( -name "*.ttf" -o -name "*.otf" -o -name "*.woff" -o -name "*.woff2" -o -name "*.eot" \) \
+		-exec cp {} ~/Library/Fonts/ \; -exec echo {} \;
+	@rm -rf fonts
+	@echo "Fonts installed, You are all set!"
+
+install-themes:
+	@echo "Setting up Catppuccin and other themes..."
+	@make catppuccin
 
 symlinks:
 	ln -s $(PWD)/.vscode-oss ${HOME}/.vscode-oss
