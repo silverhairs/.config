@@ -16,6 +16,8 @@ alias uvr="uv run"
 # alias ssh="kitty +kitten ssh"
 alias curl="curlie"
 
+alias coverage="genhtml coverage/lcov.info -o coverage/html && open coverage/html/index.html"
+
 fbat () {
 	local file
 	file=$(fzf)
