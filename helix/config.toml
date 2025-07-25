@@ -56,3 +56,5 @@ C-g = [
   ":redraw",
   ":reload-all",
 ]
+
+C-b = ":sh git log -n 5 --format='format:%%h (%%an: %%ar) %%s' --no-patch -L%{cursor_line},+1:%{buffer_name}"
