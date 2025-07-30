@@ -60,3 +60,4 @@ colima/_templates
 colima/default/daemon
 github-copilot/
 zed/prompts/prompts-library-*
+.claude/settings.local.json
