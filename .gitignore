@@ -62,3 +62,4 @@ colima/ssh_config
 github-copilot/
 zed/prompts/prompts-library-*
 .claude/settings.local.json
+.crush/
