@@ -58,6 +58,7 @@ composer/
 colima/_lima
 colima/_templates
 colima/default/daemon
+colima/ssh_config 
 github-copilot/
 zed/prompts/prompts-library-*
 .claude/settings.local.json
