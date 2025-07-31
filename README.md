@@ -1,6 +1,6 @@
 # .config
 
-Modern macOS dotfiles and development environment setup using Homebrew, zsh, and carefully curated tools.
+Personal macOS dotfiles and development environment setup using Homebrew, zsh, and carefully curated tools.
 
 ## ✨ Features
 
