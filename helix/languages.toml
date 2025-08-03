@@ -2374,7 +2374,7 @@ roots = ["settings.gradle", "settings.gradle.kts"]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
 indent = { tab-width = 4, unit = "    " }
-language-servers = ["kotlin-language-server"]
+language-servers = ["kotlin-lsp","kotlin-language-server"]
 
 [[grammar]]
 name = "kotlin"
