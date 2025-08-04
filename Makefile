@@ -2,7 +2,7 @@ flavor ?= Mocha
 gruvbox_variant ?= $(shell defaults read -g AppleInterfaceStyle 2>/dev/null | grep -q Dark && echo dark || echo light)
 lowercase = $(shell echo $(1) | tr '[:upper:]' '[:lower:]')
 
-.PHONY: install install-dotfiles install-brew install-ohmyzsh install-kitty install-helix install-fonts install-themes symlinks vscode-extensions vscode catppuccin gruvbox fonts helix clean help
+.PHONY: install install-dotfiles install-brew install-ohmyzsh install-kitty install-helix install-fonts install-themes symlinks vscode-extensions vscode catppuccin gruvbox fonts helix clean help start-theme-daemon stop-theme-daemon theme-daemon-status
 
 # Default target with help
 help:
@@ -12,6 +12,9 @@ help:
 	@echo "  install-brew     - Install Homebrew packages"
 	@echo "  install-helix    - Install and configure Helix editor"
 	@echo "  gruvbox          - Apply Gruvbox theme to Helix only (gruvbox_variant=$(gruvbox_variant))"
+	@echo "  start-theme-daemon - Start automatic theme switching daemon"
+	@echo "  stop-theme-daemon  - Stop automatic theme switching daemon"
+	@echo "  theme-daemon-status - Check daemon status"
 	@echo "  catppuccin       - Apply Catppuccin theme (flavor=$(flavor))"
 	@echo "  clean            - Remove temporary files"
 	@echo "  help             - Show this help"
@@ -197,6 +200,42 @@ gruvbox:
 		fi; \
 	fi; \
 	echo "✓ Gruvbox $(gruvbox_variant) theme applied to Helix"
+
+start-theme-daemon:
+	@echo "Starting Helix theme daemon..."
+	@set -e; \
+	if ! command -v fswatch >/dev/null 2>&1; then \
+		echo "Installing fswatch..."; \
+		brew install fswatch; \
+	fi; \
+	mkdir -p ~/.config/scripts; \
+	~/.config/scripts/helix-theme-daemon.sh; \
+	launchctl load ~/Library/LaunchAgents/com.user.helix-theme-daemon.plist 2>/dev/null || true; \
+	echo "✓ Theme daemon started and will auto-start on login"
+
+stop-theme-daemon:
+	@echo "Stopping Helix theme daemon..."
+	@launchctl unload ~/Library/LaunchAgents/com.user.helix-theme-daemon.plist 2>/dev/null || true
+	@pkill -f "helix-theme-daemon.sh" 2>/dev/null || true
+	@rm -f /tmp/helix-theme-daemon.lock
+	@echo "✓ Theme daemon stopped"
+
+theme-daemon-status:
+	@echo "Checking Helix theme daemon status..."
+	@if launchctl list | grep -q "com.user.helix-theme-daemon"; then \
+		echo "✓ Daemon is loaded in launchctl"; \
+	else \
+		echo "✗ Daemon is not loaded"; \
+	fi; \
+	if [ -f /tmp/helix-theme-daemon.lock ] && kill -0 "$$(cat /tmp/helix-theme-daemon.lock)" 2>/dev/null; then \
+		echo "✓ Daemon process is running (PID: $$(cat /tmp/helix-theme-daemon.lock))"; \
+	else \
+		echo "✗ Daemon process is not running"; \
+	fi; \
+	if [ -f /tmp/helix-theme-daemon.log ]; then \
+		echo "Recent log entries:"; \
+		tail -5 /tmp/helix-theme-daemon.log; \
+	fi
 
 clean:
 	@echo "Cleaning up temporary files..."
