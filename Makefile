@@ -1,7 +1,8 @@
 flavor ?= Mocha
+gruvbox_variant ?= $(shell defaults read -g AppleInterfaceStyle 2>/dev/null | grep -q Dark && echo dark || echo light)
 lowercase = $(shell echo $(1) | tr '[:upper:]' '[:lower:]')
 
-.PHONY: install install-dotfiles install-brew install-ohmyzsh install-kitty install-helix install-fonts install-themes symlinks vscode-extensions vscode catppuccin fonts helix clean help
+.PHONY: install install-dotfiles install-brew install-ohmyzsh install-kitty install-helix install-fonts install-themes symlinks vscode-extensions vscode catppuccin gruvbox fonts helix clean help
 
 # Default target with help
 help:
@@ -10,6 +11,7 @@ help:
 	@echo "  install-dotfiles - Symlink dotfiles only"
 	@echo "  install-brew     - Install Homebrew packages"
 	@echo "  install-helix    - Install and configure Helix editor"
+	@echo "  gruvbox          - Apply Gruvbox theme to Helix only (gruvbox_variant=$(gruvbox_variant))"
 	@echo "  catppuccin       - Apply Catppuccin theme (flavor=$(flavor))"
 	@echo "  clean            - Remove temporary files"
 	@echo "  help             - Show this help"
@@ -182,6 +184,19 @@ catppuccin:
 		gsed -i '/theme =/c\theme = "catppuccin-$(call lowercase, $(flavor))"' ~/.config/ghostty/config 2>/dev/null || true; \
 	fi; \
 	echo "✓ Catppuccin $(flavor) theme applied"
+
+gruvbox:
+	@echo "Applying Gruvbox $(gruvbox_variant) theme to Helix..."
+	@set -e; \
+	echo "→ Setting theme for Helix..."; \
+	if [ -f ~/.config/helix/config.toml ]; then \
+		if [ "$(gruvbox_variant)" = "light" ]; then \
+			gsed -i '/theme =/c\theme = "gruvbox_light_hard"' ~/.config/helix/config.toml 2>/dev/null || true; \
+		else \
+			gsed -i '/theme =/c\theme = "gruvbox_dark_hard"' ~/.config/helix/config.toml 2>/dev/null || true; \
+		fi; \
+	fi; \
+	echo "✓ Gruvbox $(gruvbox_variant) theme applied to Helix"
 
 clean:
 	@echo "Cleaning up temporary files..."
