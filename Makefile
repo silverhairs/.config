@@ -11,7 +11,7 @@ help:
 	@echo "  install-dotfiles - Symlink dotfiles only"
 	@echo "  install-brew     - Install Homebrew packages"
 	@echo "  install-helix    - Install and configure Helix editor"
-	@echo "  gruvbox          - Apply Gruvbox theme to Helix only (gruvbox_variant=$(gruvbox_variant))"
+	@echo "  gruvbox          - Apply Gruvbox theme to Helix and bat (gruvbox_variant=$(gruvbox_variant))"
 	@echo "  start-theme-daemon - Start automatic theme switching daemon"
 	@echo "  stop-theme-daemon  - Stop automatic theme switching daemon"
 	@echo "  theme-daemon-status - Check daemon status"
@@ -189,7 +189,7 @@ catppuccin:
 	echo "✓ Catppuccin $(flavor) theme applied"
 
 gruvbox:
-	@echo "Applying Gruvbox $(gruvbox_variant) theme to Helix..."
+	@echo "Applying Gruvbox $(gruvbox_variant) theme..."
 	@set -e; \
 	echo "→ Setting theme for Helix..."; \
 	if [ -f ~/.config/helix/config.toml ]; then \
@@ -199,7 +199,18 @@ gruvbox:
 			gsed -i '/theme =/c\theme = "gruvbox_dark_hard"' ~/.config/helix/config.toml 2>/dev/null || true; \
 		fi; \
 	fi; \
-	echo "✓ Gruvbox $(gruvbox_variant) theme applied to Helix"
+	echo "→ Setting theme for bat..."; \
+	if command -v bat >/dev/null 2>&1; then \
+		bat cache --build >/dev/null 2>&1 || true; \
+		if [ -f ~/.config/bat/config ]; then \
+			if [ "$(gruvbox_variant)" = "light" ]; then \
+				gsed -i '/theme/c\--theme="gruvbox-light"' ~/.config/bat/config 2>/dev/null || true; \
+			else \
+				gsed -i '/theme/c\--theme="gruvbox-dark"' ~/.config/bat/config 2>/dev/null || true; \
+			fi; \
+		fi; \
+	fi; \
+	echo "✓ Gruvbox $(gruvbox_variant) theme applied"
 
 start-theme-daemon:
 	@echo "Starting Helix theme daemon..."
