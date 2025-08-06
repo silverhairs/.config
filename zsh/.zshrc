@@ -26,7 +26,8 @@ export GEM_HOME="$HOME/.gem"
 export PATH="$PATH:/Users/${USER}/Library/Python/3.9/bin"
 export HELIX_RUNTIME="~/.config/helix/runtime"
 export EDITOR="hx"
-export DELTA_PAGER="less -F -S -R -i -+X"
+export DELTA_PAGER="less -F -S -R -i -+X --mouse"
+export PAGER="bat --paging=always"
 export TMUX_CONF=~/.config/tmux/.tmux.conf
 
 # Java and android studio
