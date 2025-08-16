@@ -442,6 +442,7 @@ file-types = [
 ]
 comment-token = "#"
 language-servers = ["taplo", "tombi"]
+auto-format = true
 indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]
@@ -983,11 +984,16 @@ file-types = [
   { glob = ".node_repl_history" },
   { glob = "jakefile" },
 ]
-shebangs = ["node"]
+shebangs = ["node", "bun"]
 roots = ["package.json", "jsconfig.json"]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = ["typescript-language-server"]
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+auto-format = true
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
 indent = { tab-width = 2, unit = "  " }
 
 [language.debugger]
@@ -1016,7 +1022,12 @@ file-types = ["jsx"]
 roots = ["package.json", "jsconfig.json"]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = ["typescript-language-server"]
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+auto-format = true
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
 indent = { tab-width = 2, unit = "  " }
 grammar = "javascript"
 
@@ -1030,7 +1041,12 @@ shebangs = ["deno", "bun", "ts-node"]
 roots = ["package.json", "tsconfig.json"]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = ["typescript-language-server"]
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+auto-format = true
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
 indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]
@@ -1057,13 +1073,18 @@ source = { git = "https://github.com/happenslol/tree-sitter-typespec", rev = "0e
 [[language]]
 name = "tsx"
 scope = "source.tsx"
-injection-regex = "(tsx)"                           # |typescript
+injection-regex = "(tsx)" # |typescript
 language-id = "typescriptreact"
 file-types = ["tsx"]
 roots = ["package.json", "tsconfig.json"]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = ["typescript-language-server"]
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+auto-format = true
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
 indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]
@@ -2374,7 +2395,7 @@ roots = ["settings.gradle", "settings.gradle.kts"]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
 indent = { tab-width = 4, unit = "    " }
-language-servers = ["kotlin-lsp","kotlin-language-server"]
+language-servers = ["kotlin-lsp", "kotlin-language-server"]
 
 [[grammar]]
 name = "kotlin"
