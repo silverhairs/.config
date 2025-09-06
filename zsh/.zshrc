@@ -46,9 +46,9 @@ export PATH="/opt/homebrew/opt/vim/bin:$PATH"
 # Carapace completions
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
-export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
-zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
-source <(carapace _carapace)
+# export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+# zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+# source <(carapace _carapace)
 
 
 source ~/.config/zsh/.zsh-alias
