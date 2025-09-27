@@ -1,7 +1,10 @@
 .claude/settings.local.json
 .crush
 CRUSH.md
+CLAUDE.md
 .claude/
+.phpactor.json
+.env.bak
 
 
 **/.claude/settings.local.json

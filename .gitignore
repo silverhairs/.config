@@ -63,3 +63,4 @@ github-copilot/
 zed/prompts/prompts-library-*
 .claude/settings.local.json
 .crush/
+.mcp.json
