@@ -2,7 +2,7 @@ flavor ?= Mocha
 gruvbox_variant ?= $(shell defaults read -g AppleInterfaceStyle 2>/dev/null | grep -q Dark && echo dark || echo light)
 lowercase = $(shell echo $(1) | tr '[:upper:]' '[:lower:]')
 
-.PHONY: install install-dotfiles install-brew install-ohmyzsh install-kitty install-helix install-fonts install-themes symlinks vscode-extensions vscode catppuccin gruvbox fonts helix clean help start-theme-daemon stop-theme-daemon theme-daemon-status
+.PHONY: install install-dotfiles install-brew install-ohmyzsh install-kitty install-helix install-fonts install-themes symlinks vscode-extensions vscode catppuccin gruvbox fonts helix clean help start-theme-daemon stop-theme-daemon theme-daemon-status gruvbox-dark gruvbox-light gruvbox-auto
 
 # Default target with help
 help:
@@ -12,6 +12,9 @@ help:
 	@echo "  install-brew     - Install Homebrew packages"
 	@echo "  install-helix    - Install and configure Helix editor"
 	@echo "  gruvbox          - Apply Gruvbox theme to Helix and bat (gruvbox_variant=$(gruvbox_variant))"
+	@echo "  gruvbox dark     - Apply Gruvbox dark hard theme"
+	@echo "  gruvbox light    - Apply Gruvbox light hard theme"
+	@echo "  gruvbox auto     - Apply Gruvbox theme based on system preference"
 	@echo "  start-theme-daemon - Start automatic theme switching daemon"
 	@echo "  stop-theme-daemon  - Stop automatic theme switching daemon"
 	@echo "  theme-daemon-status - Check daemon status"
@@ -211,6 +214,15 @@ gruvbox:
 		fi; \
 	fi; \
 	echo "✓ Gruvbox $(gruvbox_variant) theme applied"
+
+gruvbox-dark dark:
+	@$(MAKE) gruvbox gruvbox_variant=dark
+
+gruvbox-light light:
+	@$(MAKE) gruvbox gruvbox_variant=light
+
+gruvbox-auto auto:
+	@$(MAKE) gruvbox
 
 start-theme-daemon:
 	@echo "Starting Helix theme daemon..."
