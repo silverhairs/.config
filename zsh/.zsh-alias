@@ -2,7 +2,7 @@ alias flutter="fvm flutter"
 alias dart="fvm dart"
 alias python="python3"
 alias pip="pip3"
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 alias wtf="fuck"
 alias img="kitty +kitten icat"
 alias htop="btop"

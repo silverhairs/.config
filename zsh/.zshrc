@@ -58,7 +58,7 @@ source $HOME/.zsh_SECRETS
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(thefuck --alias)"
+# eval "$(thefuck --alias)"
 eval "$(rbenv init -)"
 eval "$(fzf --zsh)"
 eval "$(oh-my-posh init zsh --config ~/.config/omp.json)"
