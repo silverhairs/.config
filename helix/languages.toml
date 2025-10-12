@@ -1208,7 +1208,9 @@ file-types = [
 shebangs = ["python", "uv"]
 roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
 comment-token = "#"
-language-servers = ["ty", "ruff", "jedi", "pylsp"]
+language-servers = ["ty", "ruff"]
+# formatter = { command = "ruff", args = ["format"] }
+auto-format = true
 # TODO: pyls needs utf-8 offsets
 indent = { tab-width = 4, unit = "    " }
 
@@ -2430,6 +2432,7 @@ comment-token = "#"
 block-comment-tokens = { start = "/*", end = "*/" }
 indent = { tab-width = 2, unit = "  " }
 language-servers = ["terraform-ls"]
+formatter = { command = "terraform", args = ["fmt"] }
 auto-format = true
 
 [[grammar]]
