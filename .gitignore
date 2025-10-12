@@ -64,3 +64,4 @@ zed/prompts/prompts-library-*
 .claude/settings.local.json
 .crush/
 .mcp.json
+.tool_state
