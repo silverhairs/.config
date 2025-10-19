@@ -1,3 +1,4 @@
 [submodule ".jetbrains/kotlin-lsp"]
 	path = .jetbrains/kotlin-lsp
 	url = https://github.com/Kotlin/kotlin-lsp.git
+	branch = main
