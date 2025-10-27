@@ -17,10 +17,9 @@
     "default_model": {
       "provider": "google",
       "model": "gemini-2.5-flash"
-    },
-    "version": "2"
+    }
   },
-  "theme": "Catppuccin Mocha (Blur)",
+  "theme": "Matte Black",
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "autosave": {
@@ -30,6 +29,8 @@
   },
   "hover_popover_enabled": true,
   "formatter": "language_server",
+  "helix_mode": true,
+  "relative_line_numbers": true,
   "lsp": {
     "dart": {
       "binary": {
