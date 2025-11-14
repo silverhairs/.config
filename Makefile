@@ -84,13 +84,12 @@ helix:
 		fi; \
 		echo "Cloning Helix repository..."; \
 		if [ -d "helix-temp" ]; then rm -rf helix-temp; fi; \
-		git clone https://github.com/helix-editor/helix helix-temp; \
+		gh repo clone helix-editor/helix helix-temp; \
 		mkdir -p $(PWD)/helix; \
 		cp -R helix-temp/* $(PWD)/helix/; \
 		rm -rf helix-temp; \
 		cd helix && rm -rf .git; \
 		echo "Building Helix..."; \
-		export PATH="$$HOME/.cargo/bin:$$PATH"; \
 		cd helix && HELIX_DISABLE_AUTO_GRAMMAR_BUILD=1 cargo install --path helix-term --locked; \
 		echo "Installing Catppuccin theme..."; \
 		if [ ! -d "$(PWD)/helix/catppuccin" ]; then \
@@ -110,7 +109,7 @@ fonts:
 	@echo "Installing fonts..."
 	@set -e; \
 	if [ -d "fonts-temp" ]; then rm -rf fonts-temp; fi; \
-	git clone https://github.com/silverhairs/fonts.git fonts-temp; \
+	gh repo clone silverhairs/fonts fonts-temp; \
 	echo "Copying fonts to ~/Library/Fonts/..."; \
 	find ./fonts-temp -type f \( -name "*.ttf" -o -name "*.otf" -o -name "*.woff" -o -name "*.woff2" -o -name "*.eot" \) \
 		-exec cp {} ~/Library/Fonts/ \; 2>/dev/null || true; \

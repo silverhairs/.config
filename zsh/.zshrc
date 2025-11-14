@@ -18,6 +18,7 @@ export PATH="$PATH:/Users/${USER}/.gem/bin"
 export PATH="$PATH":"$HOME/zig"
 export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
 export PATH="$PATH:/opt/homebrew/anaconda3/bin"
+export PATH="$PATH:/.cargo/bin"
 
 # Android
 export PATH="$PATH:/Users/${USER}/Library/Android/sdk/platform-tools/"
@@ -71,7 +72,7 @@ eval "$(oh-my-posh init zsh --config ~/.config/omp.json)"
 # opam configuration
 [[ ! -r /Users/${USER}/.opam/opam-init/init.zsh ]] || source /Users/${USER}/.opam/opam-init/init.zsh >/dev/null 2>/dev/null
 
-. "$HOME/.local/bin/env"
+# . "$HOME/.local/bin/env"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
