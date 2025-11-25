@@ -19,6 +19,7 @@ export PATH="$PATH":"$HOME/zig"
 export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
 export PATH="$PATH:/opt/homebrew/anaconda3/bin"
 export PATH="$PATH:/.cargo/bin"
+export PATH="$PATH:/go/bin"
 
 # Android
 export PATH="$PATH:/Users/${USER}/Library/Android/sdk/platform-tools/"
