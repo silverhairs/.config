@@ -28,5 +28,5 @@
 	recurse = true
 [rerere]
 	enabled = true
-[includeIf "gitdir:~/Documents/Work"]
+[includeIf "gitdir:~/Documents/Work/"]
 	path = ~/.gitconfig.work

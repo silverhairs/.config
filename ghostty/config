@@ -1,0 +1,75 @@
+# Ghostty Configuration
+# Migrated from Kitty configuration
+
+# Fonts
+font-family = "IBM Plex Mono"
+font-size = 14
+
+# Font features for Nerd Fonts
+# Ghostty has built-in Nerd Fonts support, no symbol_map needed
+
+# Background
+# background-opacity = 0.85
+# background-blur-radius = 65
+
+# Note: Background images are not supported in Ghostty
+# background_image, background_image_layout, background_image_linear, background_tint
+# are Kitty-specific features
+
+# Mouse
+mouse-hide-while-typing = true
+
+# Window
+window-padding-x = 4
+window-padding-y = 4
+# window-decoration = true
+
+# macOS specific
+macos-titlebar-style = hidden
+macos-custom-icon = "~/.config/ghostty/Ghostty.icns"
+
+# Tabs
+# Note: Ghostty's tab bar is different from Kitty's powerline style
+# tab-bar-style and tab_title_max_length are not directly configurable
+# Ghostty uses a native tab bar on macOS
+
+# Cursor
+cursor-style = bar
+cursor-style-blink = false
+# Note: cursor_beam_thickness, cursor_trail, and cursor_trail_decay 
+# are not available in Ghostty
+
+# Performance
+# Note: input_delay and repaint_delay are handled automatically in Ghostty
+
+# Audio/Visual feedback
+# Note: enabled_audio_bell and bell_on_tab are not configurable in Ghostty
+# Ghostty uses system bell settings
+
+# Window borders
+# Note: draw_minimal_borders and window_border_width are not configurable
+# Ghostty handles this automatically
+
+# Notifications
+# Note: notify_on_cmd_finish is not available in Ghostty
+
+# Keybindings
+# Alt+Left: word backward
+keybind = alt+left=text:\x1b\x62
+# Alt+Right: word forward
+keybind = alt+right=text:\x1b\x66
+
+# Navigate between panes (Kitty-style)
+keybind = ctrl+shift+left_bracket=goto_split:previous
+keybind = ctrl+shift+right_bracket=goto_split:next
+
+# Note: kitty_mod+/ search binding not directly portable
+# Ghostty has its own search with cmd+f (macOS) or ctrl+shift+f (Linux)
+
+# Theme - Gruvbox Dark Hard
+# You'll need to set this in Ghostty's theme system
+# Create themes in: ~/.config/ghostty/themes/
+theme = gruvbox-dark-hard
+
+# Note: Ghostty doesn't use "include" for themes like Kitty
+# Instead, you define themes in separate files or use built-in themes

@@ -1,0 +1,45 @@
+# Gruvbox Dark Hard theme for Ghostty
+
+# Background and foreground
+background = #1d2021
+foreground = #ebdbb2
+
+# Cursor
+cursor-color = #ebdbb2
+cursor-text = #1d2021
+
+# Selection
+selection-background = #ebdbb2
+selection-foreground = #1d2021
+
+# Black
+palette = 0=#1d2021
+palette = 8=#928374
+
+# Red
+palette = 1=#cc241d
+palette = 9=#fb4934
+
+# Green
+palette = 2=#98971a
+palette = 10=#b8bb26
+
+# Yellow
+palette = 3=#d79921
+palette = 11=#fabd2f
+
+# Blue
+palette = 4=#458588
+palette = 12=#83a598
+
+# Magenta
+palette = 5=#b16286
+palette = 13=#d3869b
+
+# Cyan
+palette = 6=#689d6a
+palette = 14=#8ec07c
+
+# White
+palette = 7=#a89984
+palette = 15=#ebdbb2
