@@ -65,3 +65,4 @@ zed/prompts/prompts-library-*
 .crush/
 .mcp.json
 .tool_state
+*.keystore
