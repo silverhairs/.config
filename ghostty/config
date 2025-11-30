@@ -1,6 +1,8 @@
 # Ghostty Configuration
 # Migrated from Kitty configuration
 
+auto-update-channel = stable
+
 # Fonts
 font-family = "IBM Plex Mono"
 font-size = 14
@@ -10,7 +12,7 @@ font-size = 14
 
 # Background
 # background-opacity = 0.85
-# background-blur-radius = 65
+# background-blur = 65
 
 # Note: Background images are not supported in Ghostty
 # background_image, background_image_layout, background_image_linear, background_tint
@@ -25,8 +27,8 @@ window-padding-y = 4
 # window-decoration = true
 
 # macOS specific
-macos-titlebar-style = hidden
-macos-custom-icon = "~/.config/ghostty/Ghostty.icns"
+macos-titlebar-style = transparent
+macos-icon = chalkboard
 
 # Tabs
 # Note: Ghostty's tab bar is different from Kitty's powerline style
@@ -69,7 +71,8 @@ keybind = ctrl+shift+right_bracket=goto_split:next
 # Theme - Gruvbox Dark Hard
 # You'll need to set this in Ghostty's theme system
 # Create themes in: ~/.config/ghostty/themes/
-theme = gruvbox-dark-hard
+theme = Gruvbox Dark Hard
 
 # Note: Ghostty doesn't use "include" for themes like Kitty
 # Instead, you define themes in separate files or use built-in themes
+keybind = shift+enter=text:\x1b\r

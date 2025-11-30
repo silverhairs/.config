@@ -31,7 +31,7 @@ crystalline = { command = "crystalline", args = ["--stdio"] }
 cs = { command = "cs", args = ["launch", "--contrib", "smithy-language-server", "--", "0"] }
 csharp-ls = { command = "csharp-ls" }
 cuelsp = { command = "cuelsp" }
-dart = { command = "dart", args = ["language-server", "--client-id=helix"] }
+dart = { command = "fvm", args = ["dart", "language-server", "--client-id=helix"] }
 dcm = { command = "dcm", args = ["start-server", "--client=helix"] }
 dhall-lsp-server = { command = "dhall-lsp-server" }
 djlsp = { command = "djlsp" }
@@ -1987,7 +1987,7 @@ auto-format = true
 comment-tokens = ["//", "///"]
 block-comment-tokens = { start = "/*", end = "*/" }
 language-servers = [ "dart", "dcm" ]
-formatter = { command = "dart", args = ["format"] }
+formatter = { command = "fvm", args = ["dart", "format"] }
 indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]

@@ -66,3 +66,6 @@ zed/prompts/prompts-library-*
 .mcp.json
 .tool_state
 *.keystore
+tool_state
+cursor/chats
+cursor/cli-config.json

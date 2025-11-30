@@ -1,6 +1,5 @@
 # Q pre block. Keep at the top of this file.
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/opt/openssl@3.0/bin:$PATH"
@@ -20,6 +19,7 @@ export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
 export PATH="$PATH:/opt/homebrew/anaconda3/bin"
 export PATH="$PATH:/.cargo/bin"
 export PATH="$PATH:/go/bin"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Android
 export PATH="$PATH:/Users/${USER}/Library/Android/sdk/platform-tools/"
