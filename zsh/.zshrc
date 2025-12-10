@@ -17,8 +17,9 @@ export PATH="$PATH:/Users/${USER}/.gem/bin"
 export PATH="$PATH":"$HOME/zig"
 export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
 export PATH="$PATH:/opt/homebrew/anaconda3/bin"
-export PATH="$PATH:/.cargo/bin"
-export PATH="$PATH:/go/bin"
+export PATH="$PATH":"$HOME/.cargo/bin"
+export PATH="$PATH":"$HOME/go/bin"
+export PATH="$PATH":"$HOME/.bun/bin"
 export PATH="$HOME/.local/bin:$PATH"
 
 # Android
@@ -78,3 +79,8 @@ eval "$(oh-my-posh init zsh --config ~/.config/omp.json)"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:$HOME/.lmstudio/bin"
+# End of LM Studio CLI section
+
