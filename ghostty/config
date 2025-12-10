@@ -11,8 +11,8 @@ font-size = 14
 # Ghostty has built-in Nerd Fonts support, no symbol_map needed
 
 # Background
-# background-opacity = 0.85
-# background-blur = 65
+background-opacity = 0.85
+background-blur = 65
 
 # Note: Background images are not supported in Ghostty
 # background_image, background_image_layout, background_image_linear, background_tint
