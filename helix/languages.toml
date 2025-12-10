@@ -219,6 +219,10 @@ command = "typescript-language-server"
 args = ["--stdio"]
 config.hostInfo = "helix"
 
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
+
 [language-server.typescript-language-server.config.typescript.inlayHints]
 includeInlayEnumMemberValueHints = true
 includeInlayFunctionLikeReturnTypeHints = true
@@ -588,7 +592,7 @@ file-types = [
   "sublime-theme",
   "sublime-workspace"
 ]
-language-servers = [ "vscode-json-language-server" ]
+language-servers = [ { name= "vscode-json-language-server", except-features = ["format"]}, "biome" ]
 auto-format = true
 indent = { tab-width = 2, unit = "  " }
 
@@ -895,7 +899,8 @@ shebangs = ["node"]
 roots = [ "package.json", "jsconfig.json" ]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = [ "typescript-language-server" ]
+language-servers = [ { name = "typescript-language-server", except-features = [ "format" ]}, "biome" ]
+auto-format = true
 indent = { tab-width = 2, unit = "  " }
 
 [language.debugger]
@@ -924,7 +929,8 @@ file-types = ["jsx"]
 roots = [ "package.json", "jsconfig.json" ]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = [ "typescript-language-server" ]
+language-servers = [ { name = "typescript-language-server", except-features = [ "format" ]}, "biome" ]
+auto-format = true
 indent = { tab-width = 2, unit = "  " }
 grammar = "javascript"
 
@@ -938,7 +944,8 @@ shebangs = ["deno", "bun", "ts-node"]
 roots = [ "package.json", "tsconfig.json" ]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = [ "typescript-language-server" ]
+language-servers = [ { name = "typescript-language-server", except-features = [ "format" ]}, "biome" ]
+auto-format = true
 indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]
@@ -971,7 +978,8 @@ file-types = ["tsx"]
 roots = [ "package.json", "tsconfig.json" ]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = [ "typescript-language-server" ]
+language-servers = [ { name = "typescript-language-server", except-features = [ "format" ]}, "biome" ]
+auto-format = true
 indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]
