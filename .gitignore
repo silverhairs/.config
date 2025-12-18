@@ -69,3 +69,5 @@ zed/prompts/prompts-library-*
 tool_state
 cursor/chats
 cursor/cli-config.json
+patrol_cli
+nvm

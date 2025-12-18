@@ -1,3 +1,5 @@
 docs/*
 docs/rfcs
 docs/rfc
+wtrees/
+.cursor/commands

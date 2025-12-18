@@ -10,7 +10,7 @@ export PATH="/opt/homebrew/opt/openssl@3.0/bin:$PATH"
 export _ZO_DATA_DIR="/Users/${USER}/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 
-# Path to Flutter and dart
+# Path to binaries installed through external package managers.
 export PATH="$PATH:/Users/${USER}/fvm/default/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH:/Users/${USER}/.gem/bin"
@@ -21,6 +21,7 @@ export PATH="$PATH":"$HOME/.cargo/bin"
 export PATH="$PATH":"$HOME/go/bin"
 export PATH="$PATH":"$HOME/.bun/bin"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
 
 # Android
 export PATH="$PATH:/Users/${USER}/Library/Android/sdk/platform-tools/"
@@ -38,6 +39,7 @@ export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
 export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
 
 export PATH="/opt/homebrew/opt/php@8.2/bin:$PATH"
 export PATH="/opt/homebrew/opt/php@8.2/sbin:$PATH"
@@ -83,4 +85,9 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:$HOME/.lmstudio/bin"
 # End of LM Studio CLI section
+
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
