@@ -31,7 +31,7 @@ crystalline = { command = "crystalline", args = ["--stdio"] }
 cs = { command = "cs", args = ["launch", "--contrib", "smithy-language-server", "--", "0"] }
 csharp-ls = { command = "csharp-ls" }
 cuelsp = { command = "cuelsp" }
-dart = { command = "fvm", args = ["dart", "language-server", "--client-id=helix"] }
+dart = { command = "dart", args = ["language-server", "--client-id=helix"] }
 dcm = { command = "dcm", args = ["start-server", "--client=helix"] }
 dhall-lsp-server = { command = "dhall-lsp-server" }
 djlsp = { command = "djlsp" }
@@ -1995,12 +1995,41 @@ auto-format = true
 comment-tokens = ["//", "///"]
 block-comment-tokens = { start = "/*", end = "*/" }
 language-servers = [ "dart", "dcm" ]
-formatter = { command = "fvm", args = ["dart", "format"] }
+formatter = { command = "dart", args = ["format"] }
 indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]
 name = "dart"
 source = { git = "https://github.com/UserNobody14/tree-sitter-dart", rev = "e398400a0b785af3cf571f5a57eccab242f0cdf9" }
+
+[language.debugger]
+name = "flutter"
+transport = "stdio"
+
+# Use FVM to select the correct Flutter SDK for the project
+command = "fvm"
+args = ["flutter", "debug-adapter"]
+
+[[language.debugger.templates]]
+name = "flutter-run"
+request = "launch"
+completion = [
+  { name = "target", completion = "filename" }
+]
+
+[language.debugger.templates.args]
+# Entry point (usually lib/main.dart)
+target = "{0}"
+
+# Must be project root so FVM picks correct SDK
+cwd = "{workspace_root}"
+# Select device (change as needed)
+# Examples:
+# ["-d", "macos"]
+# ["-d", "chrome"]
+# ["-d", "iPhone"]
+toolArgs = ["--flavor", "dev","-d", "ios"]
+
 
 [[language]]
 name = "scala"
