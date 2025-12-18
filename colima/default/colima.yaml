@@ -27,7 +27,7 @@ runtime: docker
 # Set custom hostname for the virtual machine.
 # Default: colima
 #          colima-profile_name for other profiles
-hostname: colima
+hostname: ""
 
 # Kubernetes configuration for the virtual machine.
 kubernetes:
@@ -38,7 +38,7 @@ kubernetes:
   # Kubernetes version to use.
   # This needs to exactly match a k3s version https://github.com/k3s-io/k3s/releases
   # Default: latest stable release
-  version: v1.31.2+k3s1
+  version: v1.33.4+k3s1
   
   # Additional args to pass to k3s https://docs.k3s.io/cli/server
   # Default: traefik is disabled
@@ -68,13 +68,13 @@ network:
   # Network mode for the virtual machine (shared, bridged).
   # NOTE: this is currently macOS only and ignored on Linux.
   # Default: shared
-  mode: ""
+  mode: shared
   
   # Network interface to use for bridged mode.
   # This is only used when mode is set to bridged.
   # NOTE: this is currently macOS only and ignored on Linux.
   # Default: en0
-  interface: ""
+  interface: en0
   
   # Use the assigned IP address as the preferred route for the VM.
   # Note: this only has an effect when `address` is set to true.
@@ -173,7 +173,7 @@ nestedVirtualization: false
 #
 # NOTE: value cannot be changed after virtual machine is created.
 # Default: virtiofs (for vz), sshfs (for qemu)
-mountType: sshfs
+mountType: virtiofs
 
 # Propagate inotify file events to the VM.
 # NOTE: this is experimental.
