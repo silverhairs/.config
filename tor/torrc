@@ -1,0 +1,4 @@
+# Exclude German and French nodes
+ExcludeNodes {de},{fr}
+ExcludeExitNodes {de},{fr}
+StrictNodes 1
