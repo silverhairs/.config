@@ -21,6 +21,7 @@ export PATH="$PATH":"$HOME/.cargo/bin"
 export PATH="$PATH":"$HOME/go/bin"
 export PATH="$PATH":"$HOME/.bun/bin"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin/omnisharp:$PATH"
 export PATH="$HOME/.bun/bin:$PATH"
 
 # Android
@@ -93,5 +94,7 @@ export NVM_DIR="$HOME/.config/nvm"
 
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/silverhairs/.lmstudio/bin"
+export PATH="$HOME/.lmstudio/bin"
 # End of LM Studio CLI section
+export PATH="/opt/homebrew/sbin:$PATH"
+export PATH="$HOME/.dotnet/tools:$PATH"
