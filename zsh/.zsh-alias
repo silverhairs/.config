@@ -20,7 +20,19 @@ alias coverage="genhtml coverage/lcov.info -o coverage/html && open coverage/htm
 fbat () {
 	local file
 	file=$(fzf)
-	[ -n "$file" ] && bat "$file"
+	if [ -n "$file" ]; then
+		case "${file##*.}" in
+			md|markdown)
+				mdt "$file"
+				;;
+			png|jpg|jpeg|gif|bmp|svg|webp|heic|PNG|JPG|JPEG|GIF|BMP|SVG|WEBP|HEIC)
+				img "$file"
+				;;
+			*)
+				bat "$file"
+				;;
+		esac
+	fi
 }
 function ofd {
   if (( ! $# )); then
