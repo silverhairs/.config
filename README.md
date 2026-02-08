@@ -54,9 +54,20 @@ This will install and configure:
 make help              # Show all available targets
 make install           # Full system setup
 make install-dotfiles  # Symlink dotfiles only
+make install-githooks  # One-time per machine: run hooks on pull (e.g. keep omnisharp-lsp symlinked)
 make catppuccin        # Apply Catppuccin theme
 make clean             # Remove temporary files
 ```
+
+### Multi-machine setup
+
+When you use this repo on more than one computer, run **once per machine**:
+
+```bash
+make install-githooks
+```
+
+This configures git to use the repo’s `.githooks`. After that, every `git pull` runs a post-merge hook that ensures each entry in `scripts/bin-symlinks.txt` is symlinked from `~/.local/bin` into this repo (e.g. `omnisharp-lsp` for Helix). `make install-dotfiles` also creates those symlinks.
 
 ### Theme Variants
 ```bash

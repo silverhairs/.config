@@ -10,6 +10,8 @@ export PATH="/opt/homebrew/opt/openssl@3.0/bin:$PATH"
 export _ZO_DATA_DIR="/Users/${USER}/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 
+export OMNISHARP_DLL="$HOME/.local/bin/omnisharp/OmniSharp.dll"
+
 # Path to binaries installed through external package managers.
 export PATH="$PATH:/Users/${USER}/fvm/default/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"

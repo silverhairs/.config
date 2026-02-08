@@ -2,7 +2,7 @@ flavor ?= Mocha
 gruvbox_variant ?= $(shell defaults read -g AppleInterfaceStyle 2>/dev/null | grep -q Dark && echo dark || echo light)
 lowercase = $(shell echo $(1) | tr '[:upper:]' '[:lower:]')
 
-.PHONY: install install-dotfiles install-brew install-ohmyzsh install-kitty install-helix install-fonts install-themes symlinks vscode-extensions vscode catppuccin gruvbox fonts helix clean help start-theme-daemon stop-theme-daemon theme-daemon-status gruvbox-dark gruvbox-light gruvbox-auto
+.PHONY: install install-dotfiles install-brew install-ohmyzsh install-kitty install-helix install-fonts install-themes install-githooks symlinks vscode-extensions vscode catppuccin gruvbox fonts helix clean help start-theme-daemon stop-theme-daemon theme-daemon-status gruvbox-dark gruvbox-light gruvbox-auto
 
 # Default target with help
 help:
@@ -19,6 +19,7 @@ help:
 	@echo "  stop-theme-daemon  - Stop automatic theme switching daemon"
 	@echo "  theme-daemon-status - Check daemon status"
 	@echo "  catppuccin       - Apply Catppuccin theme (flavor=$(flavor))"
+	@echo "  install-githooks - One-time: use repo .githooks (symlink bin scripts on pull)"
 	@echo "  clean            - Remove temporary files"
 	@echo "  help             - Show this help"
 
@@ -36,7 +37,14 @@ install-dotfiles:
 		ln -s $(PWD)/delta/.gitconfig $(HOME)/.gitconfig && echo "✓ Linked .gitconfig"; \
 	else \
 		echo "✓ .gitconfig already exists"; \
-	fi
+	fi; \
+	REPO_ROOT=$(PWD) $(PWD)/scripts/ensure-bin-symlinks.sh
+
+install-githooks:
+	@echo "Configuring git to use repo hooks (post-merge will ensure omnisharp-lsp symlink)..."
+	@git config core.hooksPath .githooks
+	@REPO_ROOT=$$(pwd) ./scripts/ensure-bin-symlinks.sh
+	@echo "✓ Run 'make install-githooks' once per machine; after that, git pull will keep bin symlinks (see scripts/bin-symlinks.txt) linked."
 
 install-brew:
 	@echo "Setting up Homebrew..."

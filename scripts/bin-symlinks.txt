@@ -1,0 +1,4 @@
+# Binaries in this repo to symlink into ~/.local/bin (one name per line).
+# Each name is a file under the repo root, e.g. omnisharp-lsp -> REPO/omnisharp-lsp.
+# Blank lines and lines starting with # are ignored.
+omnisharp-lsp

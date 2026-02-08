@@ -92,7 +92,7 @@ nls = { command = "nls" }
 nu-lsp = { command = "nu", args = [ "--lsp" ] }
 ocamllsp = { command = "ocamllsp" }
 ols = { command = "ols", args = [] }
-omnisharp = { command = "OmniSharp", args = [ "--languageserver" ] }
+omnisharp = { command = "omnisharp-lsp", args = [] }
 openscad-lsp = { command = "openscad-lsp", args = ["--stdio"] }
 pasls = { command = "pasls", args = [] }
 pbkit = { command = "pb", args = [ "lsp" ] }
@@ -1995,7 +1995,7 @@ auto-format = true
 comment-tokens = ["//", "///"]
 block-comment-tokens = { start = "/*", end = "*/" }
 language-servers = [ "dart", "dcm" ]
-formatter = { command = "dart", args = ["format"] }
+formatter = { command = "fvm dart", args = ["format", "--output=show", "--stdin-name", "%{buffer_name}"] }
 indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]

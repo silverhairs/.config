@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+# Self-contained OmniSharp LSP launcher (no env vars required).
+# Install on PATH so Helix can run it, e.g.:
+#   ln -sf ~/.config/omnisharp-lsp ~/.local/bin/omnisharp-lsp
+OMNISHARP_DLL="${OMNISHARP_DLL:-${HOME:?HOME not set}/.local/bin/omnisharp/OmniSharp.dll}"
+exec dotnet "$OMNISHARP_DLL" --languageserver

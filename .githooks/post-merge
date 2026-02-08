@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+# After git pull: ensure bin symlinks from scripts/bin-symlinks.txt are in ~/.local/bin.
+# Requires one-time setup: git config core.hooksPath .githooks
+# (Or run: make install-githooks)
+cd "$(git rev-parse --show-toplevel)" && REPO_ROOT="$PWD" ./scripts/ensure-bin-symlinks.sh
