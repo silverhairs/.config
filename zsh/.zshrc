@@ -83,10 +83,6 @@ eval "$(oh-my-posh init zsh --config ~/.config/omp.json)"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:$HOME/.lmstudio/bin"
-# End of LM Studio CLI section
-
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -94,7 +90,7 @@ export NVM_DIR="$HOME/.config/nvm"
 
 
 # Added by LM Studio CLI (lms)
-export PATH="$HOME/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 # End of LM Studio CLI section
 export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="$HOME/.dotnet/tools:$PATH"
