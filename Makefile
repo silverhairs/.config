@@ -93,12 +93,9 @@ helix:
 		echo "Cloning Helix repository..."; \
 		if [ -d "helix-temp" ]; then rm -rf helix-temp; fi; \
 		gh repo clone helix-editor/helix helix-temp; \
-		mkdir -p $(PWD)/helix; \
-		cp -R helix-temp/* $(PWD)/helix/; \
-		rm -rf helix-temp; \
-		cd helix && rm -rf .git; \
 		echo "Building Helix..."; \
-		cd helix && HELIX_DISABLE_AUTO_GRAMMAR_BUILD=1 cargo install --path helix-term --locked; \
+		cd helix-temp && HELIX_DISABLE_AUTO_GRAMMAR_BUILD=1 cargo install --path helix-term --locked; \
+		cd $(PWD) && rm -rf helix-temp; \
 		echo "Installing Catppuccin theme..."; \
 		if [ ! -d "$(PWD)/helix/catppuccin" ]; then \
 			git clone https://github.com/catppuccin/helix.git $(PWD)/helix/catppuccin; \
