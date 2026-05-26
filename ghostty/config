@@ -4,7 +4,7 @@
 auto-update-channel = stable
 
 # Fonts
-font-family = "IBM Plex Mono"
+font-family = "Recursive Monospace"
 font-size = 14
 
 # Font features for Nerd Fonts
@@ -71,7 +71,7 @@ keybind = ctrl+shift+right_bracket=goto_split:next
 # Theme - Gruvbox Dark Hard
 # You'll need to set this in Ghostty's theme system
 # Create themes in: ~/.config/ghostty/themes/
-theme = Gruvbox Dark Hard
+theme = dark:Gruvbox Dark Hard, light: Gruvbox Light Hard
 
 # Note: Ghostty doesn't use "include" for themes like Kitty
 # Instead, you define themes in separate files or use built-in themes
