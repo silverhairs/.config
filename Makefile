@@ -2,7 +2,7 @@ flavor ?= Mocha
 gruvbox_variant ?= $(shell defaults read -g AppleInterfaceStyle 2>/dev/null | grep -q Dark && echo dark || echo light)
 lowercase = $(shell echo $(1) | tr '[:upper:]' '[:lower:]')
 
-.PHONY: install install-dotfiles install-brew install-ohmyzsh install-kitty install-helix install-fonts install-themes install-githooks symlinks vscode-extensions vscode catppuccin gruvbox fonts helix clean help start-theme-daemon stop-theme-daemon theme-daemon-status gruvbox-dark gruvbox-light gruvbox-auto
+.PHONY: install install-dotfiles install-brew install-ohmyzsh install-kitty install-helix install-helix-from-master install-fonts install-themes install-githooks symlinks vscode-extensions vscode catppuccin gruvbox fonts helix clean help start-theme-daemon stop-theme-daemon theme-daemon-status gruvbox-dark gruvbox-light gruvbox-auto
 
 # Default target with help
 help:
@@ -11,6 +11,7 @@ help:
 	@echo "  install-dotfiles - Symlink dotfiles only"
 	@echo "  install-brew     - Install Homebrew packages"
 	@echo "  install-helix    - Install and configure Helix editor"
+	@echo "  install-helix-from-master - Uninstall hx, build Helix from upstream master (~/.config/helix unchanged)"
 	@echo "  gruvbox          - Apply Gruvbox theme to Helix and bat (gruvbox_variant=$(gruvbox_variant))"
 	@echo "  gruvbox dark     - Apply Gruvbox dark hard theme"
 	@echo "  gruvbox light    - Apply Gruvbox light hard theme"
@@ -107,6 +108,37 @@ helix:
 	else \
 		echo "✓ Helix already installed"; \
 	fi
+
+# Rebuild Helix from upstream master; does not remove or replace ~/.config/helix.
+install-helix-from-master:
+	@echo "Reinstalling Helix from helix-editor/helix master (keeping ~/.config/helix)..."
+	@set -e; \
+	echo "Removing existing Helix (Cargo / Homebrew)..."; \
+	if command -v cargo >/dev/null 2>&1; then \
+		cargo uninstall helix-term 2>/dev/null || true; \
+	fi; \
+	if command -v brew >/dev/null 2>&1 && brew list helix >/dev/null 2>&1; then \
+		brew uninstall helix; \
+	fi; \
+	echo "Installing Rust if needed..."; \
+	if ! command -v cargo >/dev/null 2>&1; then \
+		curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y; \
+		. "$$HOME/.cargo/env"; \
+	fi; \
+	echo "Cloning Helix (master)..."; \
+	if [ -d "helix-temp" ]; then rm -rf helix-temp; fi; \
+	git clone --branch master --single-branch https://github.com/helix-editor/helix.git helix-temp; \
+	echo "Building Helix..."; \
+	cd helix-temp && HELIX_DISABLE_AUTO_GRAMMAR_BUILD=1 cargo install --path helix-term --locked; \
+	cd $(PWD) && rm -rf helix-temp; \
+	echo "Installing Catppuccin theme..."; \
+	if [ ! -d "$(PWD)/helix/catppuccin" ]; then \
+		git clone https://github.com/catppuccin/helix.git $(PWD)/helix/catppuccin; \
+		cd $(PWD)/helix/catppuccin && rm -rf .git; \
+	fi; \
+	echo "Setting up grammars..."; \
+	$$HOME/.cargo/bin/hx --grammar fetch && $$HOME/.cargo/bin/hx --grammar build; \
+	echo "✓ Helix from master installed (~/.config/helix left as-is)"
 
 install-fonts: fonts
 
