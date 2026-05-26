@@ -1,4 +1,6 @@
-theme = "gruvbox_dark_hard"
+[theme]
+dark = "gruvbox_dark_hard"
+light = "gruvbox_light_hard"
 
 [editor]
 line-number = "relative"
