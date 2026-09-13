@@ -2,3 +2,6 @@
 	path = .jetbrains/kotlin-lsp
 	url = https://github.com/Kotlin/kotlin-lsp.git
 	branch = main
+[submodule "lazygit/themes/catppuccin"]
+	path = lazygit/themes/catppuccin
+	url = git@github.com:catppuccin/lazygit.git
