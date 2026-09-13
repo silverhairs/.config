@@ -3,3 +3,4 @@ docs/rfcs
 docs/rfc
 wtrees/
 .cursor/commands
+.agents/skills/create-pull-request

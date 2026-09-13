@@ -71,3 +71,4 @@ cursor/chats
 cursor/cli-config.json
 patrol_cli
 nvm
+.android/avd

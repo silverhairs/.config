@@ -4,8 +4,8 @@
 [core]
 	editor = "hx"
 	pager = delta
+	hooksPath = /dev/null
 [delta]
-	features = catppuccin-mocha
 	side-by-side = true
 	hyperlinks = true
 	hyperlinks-file-link-format = "file-line://{path}:{line}"
@@ -19,11 +19,6 @@
 	conflictstyle = diff3
 [diff]
 	colorMoved = default
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
 [submodule]
 	recurse = true
 [rerere]
@@ -32,3 +27,8 @@
 	path = ~/.gitconfig.work
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

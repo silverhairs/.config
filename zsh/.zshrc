@@ -63,7 +63,7 @@ source ~/.config/zsh/.zsh-alias
 source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
 source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 source $HOME/.zsh_SECRETS
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 eval "$(zoxide init --cmd cd zsh)"
 # eval "$(thefuck --alias)"
@@ -96,3 +96,39 @@ export PATH="$PATH:$HOME/.lmstudio/bin"
 # End of LM Studio CLI section
 export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="$HOME/.dotnet/tools:$PATH"
+export CLAUDE_CODE_DISABLE_AGENT_VIEW=true
+
+# Bat theming settings
+export BAT_THEME=""
+export BAT_THEME_LIGHT="Catppuccin Latte"
+export BAT_THEME_DARK="Catppuccin Mocha"
+export BAT_STYLE="full,-grid,-header-filesize,-header-filename"
+
+# BAT_THEME
+x=$(defaults read .GlobalPreferences AppleInterfaceStyle 2>/dev/null) # Macos
+if [[ $x = "Dark" ]]
+  then
+    BAT_THEME=$BAT_THEME_DARK
+    FZF_DEFAULT_OPTS=$FLEXOKI_DARK
+  else
+    BAT_THEME=$BAT_THEME_LIGHT
+    FZF_DEFAULT_OPTS=$FLEXOKI_LIGHT
+fi
+
+# Match lazygit and its Delta pager to macOS appearance at launch.
+function lazygit() {
+  local lazygit_config_dir="${XDG_CONFIG_HOME:-$HOME/.config}/lazygit"
+  local lazygit_flavor=latte
+  local lazygit_bat_theme="${BAT_THEME_LIGHT:-Catppuccin Latte}"
+  if [[ "$(defaults read .GlobalPreferences AppleInterfaceStyle 2>/dev/null)" == Dark ]]; then
+    lazygit_flavor=mocha
+    lazygit_bat_theme="${BAT_THEME_DARK:-Catppuccin Mocha}"
+  fi
+
+  BAT_THEME="$lazygit_bat_theme" command lazygit \
+    --use-config-file="$lazygit_config_dir/config.yml,$lazygit_config_dir/themes/catppuccin/themes-mergable/$lazygit_flavor/mauve.yml" \
+    "$@"
+}
+
+# opencode
+export PATH=/Users/kayiranga/.opencode/bin:$PATH
