@@ -132,3 +132,12 @@ function lazygit() {
 
 # opencode
 export PATH=/Users/kayiranga/.opencode/bin:$PATH
+
+# mise runtime activation (interactive shells)
+eval "$(mise activate zsh)"
+
+# AsyncAPI CLI Autocomplete
+
+ASYNCAPI_AC_ZSH_SETUP_PATH=/Users/kayiranga/Library/Caches/@asyncapi/cli/autocomplete/zsh_setup && test -f $ASYNCAPI_AC_ZSH_SETUP_PATH && source $ASYNCAPI_AC_ZSH_SETUP_PATH; # asyncapi autocomplete setup
+
+

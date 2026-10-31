@@ -42,7 +42,50 @@ helix/logo.*
 helix/screenshot.*
 helix/README.md
 helix/LICENSE
+helix/*.log
+helix/*.log.*
+helix/dart-entitlements.plist
 cody-ai/
+
+# secrets
+.npmrc
+scrawl/config.json
+opencode/service.json
+opencode/opencode.json.bak-*
+twg/auth-profiles.json
+
+# colima (machine-local state)
+colima/
+
+# runtime state / not config
+rex/butler/
+openlogi/*.sock
+openlogi/*.lock
+openlogi/overlay.claim
+openlogi/config.toml.backup.*
+mole/clean-list.txt
+hunk/state.json
+cursor/statsig-cache.json
+1Password/
+
+# twg runtime state (contains org identifiers; re-created by twg)
+twg/auth-profiles.json
+twg/consent.json
+twg/install.json
+twg/upkeep.json
+twg/skills-lifecycle.json
+twg/tenant-contexts/
+twg/feature-flags/
+**/.twg-install.json
+
+# opencode generated artifacts
+opencode/opencode.json.bak-*
+**/*.enpal-rollback-*
+**/*.enpal-stage-*
+**/*.pre-loader-*
+opencode/service.json
+# local absolute-path symlinks
+opencode/skills/
 
 *.bak
 fish/

@@ -1,0 +1,24 @@
+{
+  "trustedtaps": [
+    "cqlabs/dcm",
+    "docker/tap",
+    "koekeishiya/formulaw",
+    "omnisharp/omnisharp-roslyn"
+  ],
+  "trustedcasks": [
+    "1password/tap/1password-cli",
+    "docker/tap/sbx",
+    "steipete/tap/codexbar"
+  ],
+  "trustedformulae": [
+    "anomalyco/tap/opencode",
+    "charmbracelet/tap/crush",
+    "cqlabs/dcm/dcm@1.39.1",
+    "databricks/tap/databricks",
+    "emqx/mqttx/mqttx-cli",
+    "hashicorp/tap/terraform",
+    "jetbrains/utils/kotlin-lsp",
+    "mobile-dev-inc/tap/maestro",
+    "oven-sh/bun/bun"
+  ]
+}

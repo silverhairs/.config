@@ -11,7 +11,7 @@ font-size = 14
 # Ghostty has built-in Nerd Fonts support, no symbol_map needed
 
 # Background
-background-opacity = .99
+background-opacity = .95
 background-blur = 65
 
 # Note: Background images are not supported in Ghostty
@@ -71,7 +71,7 @@ keybind = ctrl+shift+right_bracket=goto_split:next
 # Theme - Gruvbox Dark Hard
 # You'll need to set this in Ghostty's theme system
 # Create themes in: ~/.config/ghostty/themes/
-theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+theme = dark:Gruvbox Dark Hard,light:Gruvbox Light Hard
 
 # Note: Ghostty doesn't use "include" for themes like Kitty
 # Instead, you define themes in separate files or use built-in themes

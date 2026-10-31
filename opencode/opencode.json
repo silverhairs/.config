@@ -1,0 +1,299 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "enpal-gateway": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Enpal AI Gateway",
+      "options": {
+        "baseURL": "https://api.core.enpal.io/ai/aep/gateway/v1",
+        "headers": {
+          "X-Data-Class": "internal"
+        }
+      },
+      "models": {
+        "gpt-5.6-luna": {
+          "release_date": "2026-05-01",
+          "name": "GPT-5.6 Luna",
+          "reasoning": true,
+          "limit": {
+            "context": 1050000,
+            "output": 128000
+          },
+          "attachment": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "variants": {
+            "none": {
+              "reasoningEffort": "none"
+            },
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh"
+            }
+          }
+        },
+        "gpt-6-luna": {
+          "release_date": "2026-05-04",
+          "name": "GPT-6 Luna",
+          "reasoning": true,
+          "limit": {
+            "context": 1050000,
+            "output": 128000
+          },
+          "attachment": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "variants": {
+            "none": {
+              "reasoningEffort": "none"
+            },
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh"
+            }
+          }
+        },
+        "gemini-3.8-flash": {
+          "release_date": "2026-08-23",
+          "name": "Gemini 3.8 Flash",
+          "reasoning": true,
+          "limit": {
+            "context": 1048576,
+            "output": 65535
+          },
+          "attachment": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "variants": {
+            "low": {
+              "temperature": 0.2
+            },
+            "medium": {
+              "temperature": 0.5
+            },
+            "high": {
+              "temperature": 0.8
+            },
+            "max": {
+              "temperature": 1.0
+            }
+          }
+        },
+        "minimax-m3": {
+          "release_date": "2026-08-25",
+          "name": "MiniMax M3",
+          "reasoning": true,
+          "limit": {
+            "context": 1000000,
+            "output": 32768
+          },
+          "attachment": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "variants": {
+            "none": {
+              "reasoningEffort": "none"
+            },
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            }
+          }
+        },
+        "deepseek-v4.1-flash": {
+          "release_date": "2026-08-31",
+          "name": "DeepSeek V4.1 Flash",
+          "reasoning": true,
+          "limit": {
+            "context": 1048576,
+            "output": 393216
+          },
+          "attachment": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "variants": {
+            "low": {
+              "temperature": 0.2
+            },
+            "medium": {
+              "temperature": 0.5
+            },
+            "high": {
+              "temperature": 0.8
+            },
+            "max": {
+              "temperature": 1.0
+            }
+          }
+        },
+        "deepseek-v4-flash": {
+          "release_date": "2026-08-30",
+          "name": "DeepSeek V4 Flash",
+          "reasoning": true,
+          "limit": {
+            "context": 1048576,
+            "output": 32768
+          },
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "variants": {
+            "low": {
+              "temperature": 0.2
+            },
+            "medium": {
+              "temperature": 0.5
+            },
+            "high": {
+              "temperature": 0.8
+            },
+            "max": {
+              "temperature": 1.0
+            }
+          }
+        },
+        "deepseek-v4-pro": {
+          "release_date": "2026-08-24",
+          "name": "DeepSeek V4 Pro",
+          "reasoning": true,
+          "limit": {
+            "context": 1048576,
+            "output": 32768
+          },
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "variants": {
+            "low": {
+              "temperature": 0.2
+            },
+            "medium": {
+              "temperature": 0.5
+            },
+            "high": {
+              "temperature": 0.8
+            },
+            "max": {
+              "temperature": 1.0
+            }
+          }
+        },
+        "glm-5.3-flash": {
+          "release_date": "2026-08-29",
+          "name": "GLM-5.3 Flash",
+          "reasoning": true,
+          "limit": {
+            "context": 1048576,
+            "output": 32768
+          },
+          "attachment": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "variants": {
+            "low": {
+              "temperature": 0.2
+            },
+            "medium": {
+              "temperature": 0.5
+            },
+            "high": {
+              "temperature": 0.8
+            },
+            "max": {
+              "temperature": 1.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "mcp": {
+    "websearch": {
+      "type": "remote",
+      "url": "https://mcp.exa.ai/mcp",
+      "enabled": true
+    }
+  },
+  "permission": {
+    "webfetch": "allow"
+  },
+  "tools": {
+    "webfetch": true
+  }
+}

@@ -31,7 +31,7 @@ crystalline = { command = "crystalline", args = ["--stdio"] }
 cs = { command = "cs", args = ["launch", "--contrib", "smithy-language-server", "--", "0"] }
 csharp-ls = { command = "csharp-ls" }
 cuelsp = { command = "cuelsp" }
-dart = { command = "dart", args = ["language-server", "--client-id=helix"] }
+dart = { command = "dart", args = ["language-server", "--client-id=helix"], timeout = 60 }
 dcm = { command = "dcm", args = ["start-server", "--client=helix"] }
 dhall-lsp-server = { command = "dhall-lsp-server" }
 djlsp = { command = "djlsp" }
@@ -92,7 +92,8 @@ nls = { command = "nls" }
 nu-lsp = { command = "nu", args = [ "--lsp" ] }
 ocamllsp = { command = "ocamllsp" }
 ols = { command = "ols", args = [] }
-omnisharp = { command = "omnisharp-lsp", args = [] }
+omnisharp = { command = "dotnet", args = ["/Users/kayiranga/.local/bin/omnisharp/OmniSharp.dll", "--languageserver"] }
+roslyn-language-server = { command = "roslyn-language-server", args = ["--stdio"] }
 openscad-lsp = { command = "openscad-lsp", args = ["--stdio"] }
 pasls = { command = "pasls", args = [] }
 pbkit = { command = "pb", args = [ "lsp" ] }
@@ -734,7 +735,7 @@ roots = ["sln", "csproj"]
 comment-tokens = ["//", "///"]
 block-comment-tokens = { start = "/*", end = "*/" }
 indent = { tab-width = 4, unit = "\t" }
-language-servers = [ "omnisharp" ]
+language-servers = [ "omnisharp", "roslyn-language-server" ]
 
 [language.debugger]
 name = "netcoredbg"
@@ -1986,6 +1987,13 @@ block-comment-tokens = { start = "{%", end = "%}" }
 name = "djot"
 source = { git = "https://github.com/treeman/tree-sitter-djot", rev = "67e6e23ba7be81a4373e0f49e21207bdc32d12a5" }
 
+[[grammar]]
+name = "dart"
+source = { git = "https://github.com/UserNobody14/tree-sitter-dart", rev = "be07cf7118d3dba06236a3f19541685a68209934" }
+
+# -----------------
+# Flutter
+# -----------------
 [[language]]
 name = "dart"
 scope = "source.dart"
@@ -1994,13 +2002,11 @@ roots = ["pubspec.yaml"]
 auto-format = true
 comment-tokens = ["//", "///"]
 block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = [ "dart", "dcm" ]
-formatter = { command = "fvm dart", args = ["format", "--output=show", "--stdin-name", "%{buffer_name}"] }
+language-servers = [
+  { name = "dart", except-features = ["format"] },
+  "dcm",
+]
 indent = { tab-width = 2, unit = "  " }
-
-[[grammar]]
-name = "dart"
-source = { git = "https://github.com/UserNobody14/tree-sitter-dart", rev = "e398400a0b785af3cf571f5a57eccab242f0cdf9" }
 
 [language.debugger]
 name = "flutter"
@@ -2023,13 +2029,13 @@ target = "{0}"
 
 # Must be project root so FVM picks correct SDK
 cwd = "{workspace_root}"
+
 # Select device (change as needed)
 # Examples:
 # ["-d", "macos"]
 # ["-d", "chrome"]
-# ["-d", "iPhone"]
-toolArgs = ["--flavor", "dev","-d", "ios"]
-
+# ["-d", "ios"]
+toolArgs = ["-d", "iPhone"]
 
 [[language]]
 name = "scala"
